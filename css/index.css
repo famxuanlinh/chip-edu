@@ -12,6 +12,16 @@
   overflow: hidden;
 }
 
+#list-course {
+  padding: 16px;
+  border-radius: 16px;
+  transition: 0.3s;
+}
+
+#list-course:hover {
+  background-color: #f5f5f5;
+}
+
 .list-course-desc {
   display: flex;
 }
