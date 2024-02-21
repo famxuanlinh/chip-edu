@@ -223,8 +223,27 @@
             <button
               class="uk-modal-close-default"
               type="button"
-              uk-close
-            ></button>
+              style="
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+              "
+            >
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 28 28"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M13.9998 27.3333C21.3636 27.3333 27.3332 21.3638 27.3332 14C27.3332 6.63616 21.3636 0.666626 13.9998 0.666626C6.63604 0.666626 0.666504 6.63616 0.666504 14C0.666504 21.3638 6.63604 27.3333 13.9998 27.3333ZM9.05703 18.9428C8.53633 18.4221 8.53633 17.5778 9.05703 17.0571L12.1143 13.9999L9.05715 10.9428C8.53645 10.4221 8.53645 9.57789 9.05715 9.05719C9.57785 8.53649 10.4221 8.53649 10.9428 9.05719L13.9999 12.1143L17.057 9.05715C17.5777 8.53645 18.4219 8.53645 18.9426 9.05715C19.4633 9.57785 19.4633 10.4221 18.9426 10.9428L15.8855 13.9999L18.9428 17.0572C19.4635 17.5779 19.4635 18.4221 18.9428 18.9428C18.4221 19.4635 17.5778 19.4635 17.0571 18.9428L13.9999 15.8855L10.9426 18.9428C10.4219 19.4635 9.57773 19.4635 9.05703 18.9428Z"
+                  fill="#E1E1E1"
+                />
+              </svg>
+            </button>
 
             <div class="uk-grid uk-child-width-1-2@m uk-grid-stack">
               <div class="text-center" style="text-align: center">
@@ -746,7 +765,10 @@
         <!-- Danh sách khoá học -->
         <div class="uk-container">
           <div class="">
-            <div class="block-01__title block-01__title_h2 mb-16-m mb-10 ml-16">
+            <div
+              class="block-01__title block-01__title_h2 mb-16-m mb-10 ml-16"
+              style="font-weight: 700"
+            >
               Danh sách khóa học
             </div>
           </div>
@@ -755,16 +777,21 @@
           <div id="list-course" class="">
             <div class="mb-24 uk-hidden@m">
               <img
-                style="aspect-ratio: 3.57 / 2.58; border-radius: 8px"
+                style="
+                  object-fit: cover;
+                  aspect-ratio: 3.57 / 2.58;
+                  border-radius: 8px;
+                "
                 src="/public/khoa-hoc.webp"
                 alt="Avatar"
-                class="uk-object-contain uk-width-expand"
+                class="uk-width-expand"
               />
             </div>
             <div class="uk-flex" style="align-items: center">
               <div class="mr-24 uk-visible@m">
                 <img
                   style="
+                    object-fit: cover;
                     aspect-ratio: 3.57 / 2.58;
                     border-radius: 8px;
                     max-width: 357px;
@@ -821,14 +848,14 @@
                   </div>
                   <div>
                     <div class="list-course-desc_item">
-                      <p class="list-course-desc-title">4-6</p>
-                      <p class="list-course-desc-content">Tuổi</p>
+                      <p class="list-course-desc-title">4</p>
+                      <p class="list-course-desc-content">buổi học</p>
                     </div>
                   </div>
                   <div>
                     <div class="list-course-desc_item">
-                      <p class="list-course-desc-title">4-6</p>
-                      <p class="list-course-desc-content">Tuổi</p>
+                      <p class="list-course-desc-title">45p</p>
+                      <p class="list-course-desc-content">mỗi buổi</p>
                     </div>
                   </div>
                 </div>
@@ -863,7 +890,7 @@
                         />
                       </svg>
 
-                      <p style="font-size: 16px; margin: 0">
+                      <p style="font-weight: 500; font-size: 16px; margin: 0">
                         <span class="line-clamp-1"
                           >8h30 thứ Hai & thứ Tư hàng tuần</span
                         >
@@ -886,14 +913,14 @@
                     </div>
                     <div>
                       <div class="list-course-desc_item">
-                        <p class="list-course-desc-title">4-6</p>
-                        <p class="list-course-desc-content">Tuổi</p>
+                        <p class="list-course-desc-title">4</p>
+                        <p class="list-course-desc-content">buổi học</p>
                       </div>
                     </div>
                     <div>
                       <div class="list-course-desc_item">
-                        <p class="list-course-desc-title">4-6</p>
-                        <p class="list-course-desc-content">Tuổi</p>
+                        <p class="list-course-desc-title">45p</p>
+                        <p class="list-course-desc-content">mỗi buổi</p>
                       </div>
                     </div>
                   </div>
@@ -928,7 +955,14 @@
                           />
                         </svg>
 
-                        <p style="font-size: 16px; margin: 0">
+                        <p
+                          style="
+                            font-weight: 500;
+                            color: #333333;
+                            font-size: 16px;
+                            margin: 0;
+                          "
+                        >
                           <span class="line-clamp-1"
                             >8h30 thứ Hai & thứ Tư hàng tuần</span
                           >
@@ -958,7 +992,7 @@
                       class="uk-flex uk-margin-remove"
                       style="align-items: center"
                     >
-                      <div class="mr-12" style="color: #333333; font-size: 500">
+                      <div class="mr-12" style="color: #333333">
                         Thầy Edward
                       </div>
                       <svg
@@ -1026,7 +1060,11 @@
           <div id="list-course" class="">
             <div class="mb-24 uk-hidden@m">
               <img
-                style="aspect-ratio: 3.57 / 2.58; border-radius: 8px"
+                style="
+                  object-fit: cover;
+                  aspect-ratio: 3.57 / 2.58;
+                  border-radius: 8px;
+                "
                 src="/public/khoa-hoc.webp"
                 alt="Avatar"
                 class="uk-object-contain uk-width-expand"
@@ -1036,6 +1074,7 @@
               <div class="mr-24 uk-visible@m">
                 <img
                   style="
+                    object-fit: cover;
                     aspect-ratio: 3.57 / 2.58;
                     border-radius: 8px;
                     max-width: 357px;
@@ -1092,14 +1131,14 @@
                   </div>
                   <div>
                     <div class="list-course-desc_item">
-                      <p class="list-course-desc-title">4-6</p>
-                      <p class="list-course-desc-content">Tuổi</p>
+                      <p class="list-course-desc-title">4</p>
+                      <p class="list-course-desc-content">buổi học</p>
                     </div>
                   </div>
                   <div>
                     <div class="list-course-desc_item">
-                      <p class="list-course-desc-title">4-6</p>
-                      <p class="list-course-desc-content">Tuổi</p>
+                      <p class="list-course-desc-title">45p</p>
+                      <p class="list-course-desc-content">mỗi buổi</p>
                     </div>
                   </div>
                 </div>
@@ -1134,7 +1173,7 @@
                         />
                       </svg>
 
-                      <p style="font-size: 16px; margin: 0">
+                      <p style="font-weight: 500; font-size: 16px; margin: 0">
                         <span class="line-clamp-1"
                           >8h30 thứ Hai & thứ Tư hàng tuần</span
                         >
@@ -1157,14 +1196,14 @@
                     </div>
                     <div>
                       <div class="list-course-desc_item">
-                        <p class="list-course-desc-title">4-6</p>
-                        <p class="list-course-desc-content">Tuổi</p>
+                        <p class="list-course-desc-title">4</p>
+                        <p class="list-course-desc-content">buổi học</p>
                       </div>
                     </div>
                     <div>
                       <div class="list-course-desc_item">
-                        <p class="list-course-desc-title">4-6</p>
-                        <p class="list-course-desc-content">Tuổi</p>
+                        <p class="list-course-desc-title">45p</p>
+                        <p class="list-course-desc-content">mỗi buổi</p>
                       </div>
                     </div>
                   </div>
@@ -1199,7 +1238,14 @@
                           />
                         </svg>
 
-                        <p style="font-size: 16px; margin: 0">
+                        <p
+                          style="
+                            font-weight: 500;
+                            color: #333333;
+                            font-size: 16px;
+                            margin: 0;
+                          "
+                        >
                           <span class="line-clamp-1"
                             >8h30 thứ Hai & thứ Tư hàng tuần</span
                           >
@@ -1297,7 +1343,11 @@
           <div id="list-course" class="">
             <div class="mb-24 uk-hidden@m">
               <img
-                style="aspect-ratio: 3.57 / 2.58; border-radius: 8px"
+                style="
+                  object-fit: cover;
+                  aspect-ratio: 3.57 / 2.58;
+                  border-radius: 8px;
+                "
                 src="/public/khoa-hoc.webp"
                 alt="Avatar"
                 class="uk-object-contain uk-width-expand"
@@ -1307,6 +1357,7 @@
               <div class="mr-24 uk-visible@m">
                 <img
                   style="
+                    object-fit: cover;
                     aspect-ratio: 3.57 / 2.58;
                     border-radius: 8px;
                     max-width: 357px;
@@ -1374,14 +1425,14 @@
                   </div>
                   <div>
                     <div class="list-course-desc_item">
-                      <p class="list-course-desc-title">4-6</p>
-                      <p class="list-course-desc-content">Tuổi</p>
+                      <p class="list-course-desc-title">4</p>
+                      <p class="list-course-desc-content">buổi học</p>
                     </div>
                   </div>
                   <div>
                     <div class="list-course-desc_item">
-                      <p class="list-course-desc-title">4-6</p>
-                      <p class="list-course-desc-content">Tuổi</p>
+                      <p class="list-course-desc-title">45p</p>
+                      <p class="list-course-desc-content">mỗi buổi</p>
                     </div>
                   </div>
                 </div>
@@ -1416,7 +1467,7 @@
                         />
                       </svg>
 
-                      <p style="font-size: 16px; margin: 0">
+                      <p style="font-weight: 500; font-size: 16px; margin: 0">
                         <span class="line-clamp-1"
                           >8h30 thứ Hai & thứ Tư hàng tuần</span
                         >
@@ -1439,14 +1490,14 @@
                     </div>
                     <div>
                       <div class="list-course-desc_item">
-                        <p class="list-course-desc-title">4-6</p>
-                        <p class="list-course-desc-content">Tuổi</p>
+                        <p class="list-course-desc-title">4</p>
+                        <p class="list-course-desc-content">buổi học</p>
                       </div>
                     </div>
                     <div>
                       <div class="list-course-desc_item">
-                        <p class="list-course-desc-title">4-6</p>
-                        <p class="list-course-desc-content">Tuổi</p>
+                        <p class="list-course-desc-title">45p</p>
+                        <p class="list-course-desc-content">mỗi buổi</p>
                       </div>
                     </div>
                   </div>
@@ -1481,7 +1532,14 @@
                           />
                         </svg>
 
-                        <p style="font-size: 16px; margin: 0">
+                        <p
+                          style="
+                            font-weight: 500;
+                            color: #333333;
+                            font-size: 16px;
+                            margin: 0;
+                          "
+                        >
                           <span class="line-clamp-1"
                             >8h30 thứ Hai & thứ Tư hàng tuần</span
                           >
@@ -1548,23 +1606,13 @@
                   >
                     102 học sinh đã đăng ký
                   </div>
-                  <div
-                    class="uk-flex uk-padding-remove"
-                    style="align-items: center"
-                  >
+                  <div class="uk-padding-remove" style="align-items: center">
                     <div
-                      class="block-01__desc mr-16 uk-visible@m"
+                      class="block-01__desc mr-16 uk-visible@m uk-text-right"
                       style="color: #555555; flex: none"
                     >
                       102 học sinh đã đăng ký
                     </div>
-                    <button
-                      class="pl-15 pr-15 uk-button uk-button-secondary uk-button--btn-1 uk-button--success uk-width-1-1 uk-border-rounded btn-trial-signup"
-                      uk-toggle="target: #modal-dky-hoc"
-                      type="button"
-                    >
-                      Đăng ký học
-                    </button>
                   </div>
                 </div>
               </div>
@@ -1582,8 +1630,27 @@
             <button
               class="uk-modal-close-default"
               type="button"
-              uk-close
-            ></button>
+              style="
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+              "
+            >
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 28 28"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M13.9998 27.3333C21.3636 27.3333 27.3332 21.3638 27.3332 14C27.3332 6.63616 21.3636 0.666626 13.9998 0.666626C6.63604 0.666626 0.666504 6.63616 0.666504 14C0.666504 21.3638 6.63604 27.3333 13.9998 27.3333ZM9.05703 18.9428C8.53633 18.4221 8.53633 17.5778 9.05703 17.0571L12.1143 13.9999L9.05715 10.9428C8.53645 10.4221 8.53645 9.57789 9.05715 9.05719C9.57785 8.53649 10.4221 8.53649 10.9428 9.05719L13.9999 12.1143L17.057 9.05715C17.5777 8.53645 18.4219 8.53645 18.9426 9.05715C19.4633 9.57785 19.4633 10.4221 18.9426 10.9428L15.8855 13.9999L18.9428 17.0572C19.4635 17.5779 19.4635 18.4221 18.9428 18.9428C18.4221 19.4635 17.5778 19.4635 17.0571 18.9428L13.9999 15.8855L10.9426 18.9428C10.4219 19.4635 9.57773 19.4635 9.05703 18.9428Z"
+                  fill="#E1E1E1"
+                />
+              </svg>
+            </button>
 
             <div>
               <form class="uk-form-stacked">
@@ -1598,16 +1665,17 @@
                   <div
                     class="block-01__desc block-01__desc--fz-18 uk-margin"
                     id="popup-quote"
+                    style="color: #555555"
                   >
                     Chip Chip sẽ liên hệ và gửi đường dẫn tham gia chương trình
                     qua email của bạn
                   </div>
                   <div class="uk-margin-small">
-                    <label class="uk-form-label">Số điện thoại</label>
+                    <!-- <label class="uk-form-label">Số điện thoại</label> -->
 
                     <div class="uk-form-controls">
                       <input
-                        class="uk-input form-dky__input"
+                        class="uk-input form-dky-hoc__input"
                         type="number"
                         id="txtDienThoai"
                         placeholder="Hãy nhập số điện thoại"
@@ -1615,10 +1683,10 @@
                     </div>
 
                     <div class="uk-margin-small">
-                      <label class="uk-form-label">Email</label>
+                      <!-- <label class="uk-form-label">Email</label> -->
                       <div class="uk-form-controls">
                         <input
-                          class="uk-input form-dky__input"
+                          class="uk-input form-dky-hoc__input"
                           type="text"
                           id="mail"
                           placeholder="Hãy nhập email"
@@ -1628,10 +1696,10 @@
 
                     <div class="uk-flex uk-child-width-1-2">
                       <div class="mr-8">
-                        <label class="uk-form-label">Tên con</label>
+                        <!-- <label class="uk-form-label">Tên con</label> -->
                         <div class="uk-form-controls">
                           <input
-                            class="uk-input form-dky__input"
+                            class="uk-input form-dky-hoc__input"
                             type="text"
                             id="txtHoTen"
                             placeholder="Nhập tên đầy đủ"
@@ -1639,7 +1707,7 @@
                         </div>
                       </div>
                       <div uk-form-custom="target: > * > span:first-child">
-                        <label class="uk-form-label">Năm sinh</label>
+                        <!-- <label class="uk-form-label">Năm sinh</label> -->
                         <select aria-label="">
                           <option value="">Năm sinh</option>
                           <option value="2013">2013</option>
@@ -1652,12 +1720,24 @@
                           <option value="2020">2020</option>
                         </select>
                         <button
-                          class="uk-button uk-button-default"
+                          class="uk-button uk-button-default form-dky-hoc__input"
                           type="button"
                           tabindex="-1"
+                          style="
+                            padding-left: 8px;
+                            padding-right: 8px;
+                            text-transform: capitalize;
+                            width: 100%;
+                            justify-content: space-between;
+                            display: flex;
+                            align-items: center;
+                          "
                         >
-                          <span></span>
-                          <span uk-icon="icon: chevron-down"></span>
+                          <span style="color: #969696"></span>
+                          <span
+                            style="color: #969696"
+                            uk-icon="icon: triangle-down"
+                          ></span>
                         </button>
                       </div>
                     </div>
@@ -1685,14 +1765,34 @@
                         <button
                           class="uk-modal-close-default"
                           type="button"
-                          uk-close
-                        ></button>
+                          style="
+                            background-color: transparent;
+                            border: none;
+                            cursor: pointer;
+                          "
+                        >
+                          <svg
+                            width="28"
+                            height="28"
+                            viewBox="0 0 28 28"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M13.9998 27.3333C21.3636 27.3333 27.3332 21.3638 27.3332 14C27.3332 6.63616 21.3636 0.666626 13.9998 0.666626C6.63604 0.666626 0.666504 6.63616 0.666504 14C0.666504 21.3638 6.63604 27.3333 13.9998 27.3333ZM9.05703 18.9428C8.53633 18.4221 8.53633 17.5778 9.05703 17.0571L12.1143 13.9999L9.05715 10.9428C8.53645 10.4221 8.53645 9.57789 9.05715 9.05719C9.57785 8.53649 10.4221 8.53649 10.9428 9.05719L13.9999 12.1143L17.057 9.05715C17.5777 8.53645 18.4219 8.53645 18.9426 9.05715C19.4633 9.57785 19.4633 10.4221 18.9426 10.9428L15.8855 13.9999L18.9428 17.0572C19.4635 17.5779 19.4635 18.4221 18.9428 18.9428C18.4221 19.4635 17.5778 19.4635 17.0571 18.9428L13.9999 15.8855L10.9426 18.9428C10.4219 19.4635 9.57773 19.4635 9.05703 18.9428Z"
+                              fill="#E1E1E1"
+                            />
+                          </svg>
+                        </button>
 
                         <div>
                           <fieldset class="uk-fieldset frmdk">
                             <legend
                               class="uk-legend block-01__title block-01__title--fz-32"
                               id="popup-title"
+                              style="font-size: 20px; font-weight: 700"
                             >
                               Giáo viên
                             </legend>
@@ -1847,6 +1947,7 @@
                             <div
                               class="block-01__desc block-01__desc--fz-18 uk-margin"
                               id="popup-quote"
+                              style="color: #2b2b2c"
                             >
                               “Tôi có thể dạy từ các bạn mới bắt đầu đến các bạn
                               đã có kiến thức nền và đang muốn cải thiện thêm
@@ -2565,7 +2666,6 @@
                     <script src="/Js/sweetalert2.all.min.js"></script>
 
                     <!--End footer-->
-                    >
                   </div>
                 </fieldset>
               </form>

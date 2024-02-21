@@ -63,3 +63,11 @@
     padding-left: 0;
   }
 }
+
+.form-dky-hoc__input {
+  border-color: #e6e6e6;
+  font-size: 16px;
+  border-radius: 6px;
+  font-family: "iCiel Graphik Regular", sans-serif;
+  color: #171717;
+}
