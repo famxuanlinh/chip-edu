@@ -205,7 +205,7 @@
                     id="btn-res-desktop"
                     type="button"
                   >
-                    HỌC THỬ MIỄN PHÍ
+                    Đăng ký học
                   </button>
                 </div>
               </div>
@@ -218,220 +218,193 @@
         <div id="modal-dky" class="uk-flex-top form-dky" uk-modal>
           <div
             class="uk-modal-dialog form-dky__dialog uk-modal-body uk-margin-auto-vertical"
-            style="width: 900px"
+            style="width: 450px"
           >
             <button
               class="uk-modal-close-default"
               type="button"
-              style="
-                background-color: transparent;
-                border: none;
-                cursor: pointer;
-              "
-            >
-              <svg
-                width="28"
-                height="28"
-                viewBox="0 0 28 28"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M13.9998 27.3333C21.3636 27.3333 27.3332 21.3638 27.3332 14C27.3332 6.63616 21.3636 0.666626 13.9998 0.666626C6.63604 0.666626 0.666504 6.63616 0.666504 14C0.666504 21.3638 6.63604 27.3333 13.9998 27.3333ZM9.05703 18.9428C8.53633 18.4221 8.53633 17.5778 9.05703 17.0571L12.1143 13.9999L9.05715 10.9428C8.53645 10.4221 8.53645 9.57789 9.05715 9.05719C9.57785 8.53649 10.4221 8.53649 10.9428 9.05719L13.9999 12.1143L17.057 9.05715C17.5777 8.53645 18.4219 8.53645 18.9426 9.05715C19.4633 9.57785 19.4633 10.4221 18.9426 10.9428L15.8855 13.9999L18.9428 17.0572C19.4635 17.5779 19.4635 18.4221 18.9428 18.9428C18.4221 19.4635 17.5778 19.4635 17.0571 18.9428L13.9999 15.8855L10.9426 18.9428C10.4219 19.4635 9.57773 19.4635 9.05703 18.9428Z"
-                  fill="#E1E1E1"
-                />
-              </svg>
-            </button>
+              uk-close
+            ></button>
 
-            <div class="uk-grid uk-child-width-1-2@m uk-grid-stack">
-              <div class="text-center" style="text-align: center">
-                <img
-                  src="/img/li-xi-2024/li-xi-mid-reg.png"
-                  style="cursor: pointer"
-                />
-              </div>
-              <div>
-                <form class="uk-form-stacked">
-                  <fieldset class="uk-fieldset frmdk">
-                    <legend
-                      class="uk-legend block-01__title block-01__title--fz-32 uk-text-center"
-                      id="popup-title"
-                    >
-                      HỌC THỬ MIỄN PHÍ, HÁI LỘC LÌ XÌ
-                    </legend>
-                    <div
-                      class="block-01__desc block-01__desc--fz-18 uk-margin"
-                      id="popup-quote"
-                    >
-                      Vui lòng để lại thông tin, Chip Chip sẽ liên hệ lại để hỗ
-                      trợ học thử.
+            <div>
+              <form class="uk-form-stacked">
+                <fieldset class="uk-fieldset frmdk">
+                  <legend
+                    class="uk-legend block-01__title block-01__title--fz-32 uk-text-center"
+                    id="popup-title"
+                  >
+                    HỌC THỬ MIỄN PHÍ, HÁI LỘC LÌ XÌ
+                  </legend>
+                  <div
+                    class="block-01__desc block-01__desc--fz-18 uk-margin"
+                    id="popup-quote"
+                  >
+                    Vui lòng để lại thông tin, Chip Chip sẽ liên hệ lại để hỗ
+                    trợ học thử.
+                  </div>
+                  <div class="uk-margin-small">
+                    <label class="uk-form-label">Họ tên con</label>
+                    <div class="uk-form-controls">
+                      <input
+                        class="uk-input form-dky-hoc__input"
+                        type="text"
+                        id="txtHoTen"
+                        placeholder="Nhập tên đầy đủ"
+                      />
                     </div>
-                    <div class="uk-margin-small">
-                      <label class="uk-form-label">Họ tên con</label>
-                      <div class="uk-form-controls">
+                  </div>
+                  <div class="uk-margin-small dkyear">
+                    <label class="uk-form-label">Năm sinh</label>
+                    <div class="uk-form-controls">
+                      <button
+                        class="uk-button uk-button-default"
+                        type="button"
+                        style="padding: 0"
+                      >
                         <input
-                          class="uk-input form-dky__input"
+                          readonly
+                          class="uk-input form-dky-hoc__input"
                           type="text"
-                          id="txtHoTen"
-                          placeholder="Nhập tên đầy đủ"
+                          id="txtNamSinh"
+                          placeholder="Chọn năm sinh"
                         />
+                      </button>
+                      <div
+                        uk-dropdown="mode: click;pos: bottom-justify;boundary: .dkyear; boundary-align: true"
+                      >
+                        <div class="uk-dropdown-grid" uk-grid>
+                          <div class="uk-width-expand" id="listyear"></div>
+                        </div>
                       </div>
                     </div>
-                    <div class="uk-margin-small dkyear">
-                      <label class="uk-form-label">Năm sinh</label>
+                  </div>
+
+                  <div class="uk-margin-small" style="display: none">
+                    <label class="uk-form-label">Thiết bị học tập</label>
+                    <div class="uk-form-controls">
+                      <select id="drpDevice" class="uk-select">
+                        <option value="1">Máy tính</option>
+                        <option value="2">iPad (Apple)</option>
+                        <option value="3">Máy tính bảng khác</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="uk-margin-small" style="display: none">
+                    <input
+                      class="uk-input form-dky-hoc__input"
+                      type="text"
+                      id="ma-uu-dai"
+                      placeholder="Mã ưu đãi (Nếu có)"
+                    />
+                  </div>
+                  <div class="uk-margin-small">
+                    <label class="uk-form-label">Số điện thoại</label>
+
+                    <div class="uk-form-controls">
+                      <input
+                        class="uk-input form-dky-hoc__input"
+                        type="number"
+                        id="txtDienThoai"
+                        placeholder=""
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="uk-margin-small"
+                    id="dv-Verify"
+                    style="display: none"
+                  >
+                    <label class="uk-form-label">Nhập mã xác nhận</label>
+                    <a href="#" class="uk-form-label getcode"
+                      >Lấy mã xác nhận</a
+                    >
+                    <div class="uk-form-controls">
+                      <input
+                        class="uk-input form-dky-hoc__input"
+                        type="number"
+                        id="txtCode"
+                        placeholder="Nhập mã xác nhận từ tin nhắn điện thoại"
+                      />
+                    </div>
+                  </div>
+                  <div class="uk-margin-small" uk-grid style="display: none">
+                    <div class="uk-width-1-2">
+                      <label class="uk-form-label">Ngày học thử</label>
                       <div class="uk-form-controls">
                         <button
-                          class="uk-button uk-button-default"
+                          class="uk-button uk-button-default btnNgay"
                           type="button"
                           style="padding: 0"
                         >
                           <input
                             readonly
-                            class="uk-input form-dky__input"
+                            class="uk-input form-dky-hoc__input"
                             type="text"
-                            id="txtNamSinh"
-                            placeholder="Chọn năm sinh"
+                            id="txtNgay"
+                            placeholder="Ngày"
                           />
                         </button>
                         <div
-                          uk-dropdown="mode: click;pos: bottom-justify;boundary: .dkyear; boundary-align: true"
+                          uk-dropdown="mode: click;pos: bottom-justify;boundary: .dktime; boundary-align: true"
                         >
                           <div class="uk-dropdown-grid" uk-grid>
-                            <div class="uk-width-expand" id="listyear"></div>
+                            <div class="uk-width-expand" id="listDay"></div>
                           </div>
                         </div>
                       </div>
                     </div>
-
-                    <div class="uk-margin-small" style="display: none">
-                      <label class="uk-form-label">Thiết bị học tập</label>
+                    <div class="uk-width-1-2">
+                      <label class="uk-form-label">Giờ học thử</label>
                       <div class="uk-form-controls">
-                        <select id="drpDevice" class="uk-select">
-                          <option value="1">Máy tính</option>
-                          <option value="2">iPad (Apple)</option>
-                          <option value="3">Máy tính bảng khác</option>
-                        </select>
+                        <button
+                          class="uk-button uk-button-default btnGio"
+                          type="button"
+                          style="padding: 0"
+                        >
+                          <input
+                            readonly
+                            class="uk-input form-dky-hoc__input"
+                            type="text"
+                            id="txtGio"
+                            placeholder="Giờ"
+                          />
+                        </button>
+                        <div
+                          uk-dropdown="mode: click;pos: bottom-justify;boundary: .dktime; boundary-align: true"
+                        >
+                          <div class="uk-dropdown-grid" uk-grid>
+                            <div class="uk-width-expand" id="listhour"></div>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div class="uk-margin-small" style="display: none">
+                  </div>
+                  <div class="dktime"></div>
+                  <div class="uk-margin-small" style="display: none">
+                    <label class="uk-form-label">Mật khẩu</label>
+                    <div class="uk-form-controls" style="position: relative">
                       <input
-                        class="uk-input form-dky__input"
-                        type="text"
-                        id="ma-uu-dai"
-                        placeholder="Mã ưu đãi (Nếu có)"
+                        class="uk-input form-dky-hoc__input"
+                        type="password"
+                        id="txtMatKhau"
+                        placeholder="Nhập mật khẩu dễ nhớ"
                       />
+                      <i id="btn-show-password" class="fa fa-eye-slash"></i>
                     </div>
-                    <div class="uk-margin-small">
-                      <label class="uk-form-label">Số điện thoại</label>
-
-                      <div class="uk-form-controls">
-                        <input
-                          class="uk-input form-dky__input"
-                          type="number"
-                          id="txtDienThoai"
-                          placeholder=""
-                        />
-                      </div>
-                    </div>
-                    <div
-                      class="uk-margin-small"
-                      id="dv-Verify"
-                      style="display: none"
+                  </div>
+                  <div class="uk-margin-small uk-text-center">
+                    <a
+                      id="btn-register"
+                      class="pl-10 pl-15-s pr-10 pr-15-s uk-button uk-button-secondary uk-button--btn-1 uk-button--success uk-border-rounded"
+                      >Đăng ký ngay</a
                     >
-                      <label class="uk-form-label">Nhập mã xác nhận</label>
-                      <a href="#" class="uk-form-label getcode"
-                        >Lấy mã xác nhận</a
-                      >
-                      <div class="uk-form-controls">
-                        <input
-                          class="uk-input form-dky__input"
-                          type="number"
-                          id="txtCode"
-                          placeholder="Nhập mã xác nhận từ tin nhắn điện thoại"
-                        />
-                      </div>
-                    </div>
-                    <div class="uk-margin-small" uk-grid style="display: none">
-                      <div class="uk-width-1-2">
-                        <label class="uk-form-label">Ngày học thử</label>
-                        <div class="uk-form-controls">
-                          <button
-                            class="uk-button uk-button-default btnNgay"
-                            type="button"
-                            style="padding: 0"
-                          >
-                            <input
-                              readonly
-                              class="uk-input form-dky__input"
-                              type="text"
-                              id="txtNgay"
-                              placeholder="Ngày"
-                            />
-                          </button>
-                          <div
-                            uk-dropdown="mode: click;pos: bottom-justify;boundary: .dktime; boundary-align: true"
-                          >
-                            <div class="uk-dropdown-grid" uk-grid>
-                              <div class="uk-width-expand" id="listDay"></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="uk-width-1-2">
-                        <label class="uk-form-label">Giờ học thử</label>
-                        <div class="uk-form-controls">
-                          <button
-                            class="uk-button uk-button-default btnGio"
-                            type="button"
-                            style="padding: 0"
-                          >
-                            <input
-                              readonly
-                              class="uk-input form-dky__input"
-                              type="text"
-                              id="txtGio"
-                              placeholder="Giờ"
-                            />
-                          </button>
-                          <div
-                            uk-dropdown="mode: click;pos: bottom-justify;boundary: .dktime; boundary-align: true"
-                          >
-                            <div class="uk-dropdown-grid" uk-grid>
-                              <div class="uk-width-expand" id="listhour"></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="dktime"></div>
-                    <div class="uk-margin-small" style="display: none">
-                      <label class="uk-form-label">Mật khẩu</label>
-                      <div class="uk-form-controls" style="position: relative">
-                        <input
-                          class="uk-input form-dky__input"
-                          type="password"
-                          id="txtMatKhau"
-                          placeholder="Nhập mật khẩu dễ nhớ"
-                        />
-                        <i id="btn-show-password" class="fa fa-eye-slash"></i>
-                      </div>
-                    </div>
-                    <div class="uk-margin-small uk-text-center">
-                      <a
-                        id="btn-register"
-                        class="pl-10 pl-15-s pr-10 pr-15-s uk-button uk-button-secondary uk-button--btn-1 uk-button--success uk-border-rounded"
-                        >Đăng ký ngay</a
-                      >
-                    </div>
-                    <div
-                      class="uk-margin-small uk-text-center"
-                      id="dv-Login"
-                    ></div>
-                  </fieldset>
-                </form>
-              </div>
+                  </div>
+                  <div
+                    class="uk-margin-small uk-text-center"
+                    id="dv-Login"
+                  ></div>
+                </fieldset>
+              </form>
             </div>
           </div>
         </div>
@@ -1942,13 +1915,15 @@
                             </div>
 
                             <div class="mb-16">
-                              <img
+                              <iframe
                                 uk-video
                                 style="border-radius: 8px"
-                                src="/public/image.webp"
-                                alt="Avatar"
                                 class="uk-object-contain uk-width-expand"
-                              />
+                                width="420"
+                                height="315"
+                                src="https://www.youtube.com/embed/_lj327AsvCs"
+                              >
+                              </iframe>
                             </div>
 
                             <div
