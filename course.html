@@ -748,15 +748,39 @@
                           </div>
                         </div>
                       </div>
-                      <div class="mb-16 uk-hidden@s">
+                      <div
+                        class="mb-16 uk-hidden@s uk-position-relative"
+                        uk-toggle="target: #modal-giao-vien"
+                      >
                         <img
-                          uk-toggle="target: #modal-giao-vien"
                           uk-video
                           style="border-radius: 8px"
-                          src="/public/image.webp"
+                          src="/public/image1.webp"
                           alt="Avatar"
                           class="uk-object-contain uk-width-expand"
                         />
+                        <svg
+                          id="icon-play"
+                          width="64"
+                          class="uk-position-center"
+                          height="64"
+                          viewBox="0 0 64 64"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle
+                            opacity="0.4"
+                            cx="32"
+                            cy="32"
+                            r="32"
+                            fill="#66DB53"
+                          />
+                          <circle cx="32" cy="32" r="24" fill="#66DB53" />
+                          <path
+                            d="M40.6154 29.5941C42.4615 30.6634 42.4615 33.3366 40.6154 34.4059L28.1538 41.6237C26.3077 42.693 24 41.3563 24 39.2177L24 24.7823C24 22.6437 26.3077 21.307 28.1538 22.3763L40.6154 29.5941Z"
+                            fill="white"
+                          />
+                        </svg>
                       </div>
                       <div class="uk-flex">
                         <div
@@ -772,14 +796,40 @@
                           dẫn. Vì vậy, tôi luôn tâm niệm rằng học sinh của mình
                           phải có nhiều niềm vui trong lớp.”
                         </div>
-                        <div class="ml-24 uk-visible@s" style="width: 300px">
+                        <div
+                          class="ml-24 uk-visible@s uk-position-relative"
+                          style="width: 300px; height: min-content"
+                          uk-toggle="target: #modal-giao-vien"
+                        >
                           <img
-                            uk-toggle="target: #modal-giao-vien"
                             style="border-radius: 8px; cursor: pointer"
-                            src="/public/image.webp"
+                            src="/public/image1.webp"
                             alt="Avatar"
                             class="uk-object-contain uk-width-expand"
                           />
+                          <svg
+                            width="48"
+                            id="icon-play"
+                            class="uk-position-center uk-light"
+                            style="cursor: pointer"
+                            height="48"
+                            viewBox="0 0 64 64"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <circle
+                              opacity="0.4"
+                              cx="32"
+                              cy="32"
+                              r="32"
+                              fill="#66DB53"
+                            />
+                            <circle cx="32" cy="32" r="24" fill="#66DB53" />
+                            <path
+                              d="M40.6154 29.5941C42.4615 30.6634 42.4615 33.3366 40.6154 34.4059L28.1538 41.6237C26.3077 42.693 24 41.3563 24 39.2177L24 24.7823C24 22.6437 26.3077 21.307 28.1538 22.3763L40.6154 29.5941Z"
+                              fill="white"
+                            />
+                          </svg>
                         </div>
                       </div>
                     </fieldset>
@@ -1017,11 +1067,11 @@
             <div class="mb-16">
               <iframe
                 uk-video
-                style="border-radius: 8px"
+                style="border-radius: 8px; aspect-ratio: 16/9"
                 class="uk-object-contain uk-width-expand"
                 width="420"
-                height="315"
-                src="https://www.youtube.com/embed/_lj327AsvCs"
+                allow="autoplay"
+                src="https://www.youtube.com/embed/_lj327AsvCs?autoplay=1"
               >
               </iframe>
             </div>

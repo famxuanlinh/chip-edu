@@ -71,3 +71,8 @@
   font-family: "iCiel Graphik Regular", sans-serif;
   color: #171717;
 }
+
+#icon-play:hover {
+  width: 54px;
+  height: 54px;
+}
