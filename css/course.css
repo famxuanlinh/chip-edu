@@ -1,0 +1,1129 @@
+/* Course Page Styles - Extracted from inline styles */
+
+/* Responsive Container Padding */
+@media (max-width: 959px) {
+  .course-container {
+    padding: 0 24px !important;
+  }
+
+  .course-image-section {
+    flex-direction: column;
+  }
+
+  .course-image {
+    height: 232.342px;
+    align-self: stretch;
+    aspect-ratio: 327/232.34;
+    border-radius: 12px;
+    object-fit: cover;
+    background: url(<path-to-image>) lightgray 0px -24.753px / 100% 134.211% no-repeat;
+  }
+
+  .course-title {
+    font-size: 18px !important;
+    line-height: 1.33em !important;
+  }
+
+  .course-info-text {
+    font-size: 14px !important;
+    line-height: 1.71em !important;
+  }
+
+  .course-benefit-title {
+    font-size: 16px !important;
+    line-height: 1.5em !important;
+  }
+
+  .course-title-text {
+    color: #00b342;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px; /* 133.333% */
+  }
+
+  .benefits-section {
+    margin-bottom: 184px !important;
+  }
+}
+
+@media (min-width: 960px) {
+  .course-container {
+    padding: 0 16px !important;
+  }
+
+  .course-image {
+    border-radius: 12px;
+    width: 231px;
+    object-fit: cover;
+    height: 164px;
+    aspect-ratio: 231/164;
+    background: url(<path-to-image>) lightgray 0px -17.472px / 100% 134.211% no-repeat;
+  }
+
+  .course-title {
+    font-size: 22px !important;
+    line-height: 1.45em !important;
+  }
+
+  .course-info-text {
+    font-size: 16px !important;
+    line-height: 1.5em !important;
+  }
+
+  .course-benefit-title {
+    font-size: 18px !important;
+    line-height: 1.33em !important;
+  }
+}
+
+/* Fixed Bottom Registration Bar (Mobile) */
+.fixed-bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: 980;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.25);
+  padding: 16px 24px;
+}
+
+.availability-badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.availability-text {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5em;
+  color: #eb4411;
+}
+
+.availability-number {
+  background-color: #eb4411;
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.availability-number-text {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.6em;
+  color: #ffffff;
+}
+
+.progress-bar-container {
+  padding: 4px 16px;
+  margin-bottom: 12px;
+}
+
+.register-button {
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 16px;
+}
+
+/* Off-canvas Registration Form */
+.offcanvas-register {
+  width: 100%;
+  max-width: 375px;
+  padding: 0;
+  border-radius: 16px 16px 0 0;
+  box-shadow: 0px -4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.offcanvas-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background-color: #f4f4f4;
+}
+
+.offcanvas-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.6em;
+  color: #00b342 !important;
+  margin: 0;
+}
+
+.offcanvas-close-btn {
+  background-color: rgba(120, 120, 128, 0.16);
+  border-radius: 6px;
+  width: 32px;
+  height: 32px;
+  padding: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.offcanvas-content {
+  padding: 0 24px 12px;
+  background-color: white;
+}
+
+.form-container {
+  background-color: #f4f4f4;
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.form-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.form-title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.33em;
+  color: #f89617;
+}
+
+.form-label {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.25em;
+  color: #4b4b4b;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.form-input,
+.form-select {
+  border: 1px solid #d9d9d9;
+  border-radius: 12px !important;
+  padding: 12px 16px !important;
+  font-size: 16px;
+  background-color: white !important;
+}
+
+.form-input::placeholder {
+  color: #b6b6b6 !important;
+}
+
+.form-select {
+  padding: 0 16px !important;
+}
+
+/* Red color for placeholder state */
+.form-select:required:invalid {
+ color: #b6b6b6 !important;
+}
+
+/* Black color when valid option is selected */
+.form-select:required:valid {
+  color: black !important;
+}
+
+/* Ensure all options are black except placeholder */
+.form-select option {
+  color: black;
+}
+
+.form-select option[value=""][disabled] {
+  display: none;
+}
+
+.form-submit-btn {
+  background-color: #00b342;
+  border-radius: 12px;
+  padding: 16px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1em;
+  color: white;
+}
+
+/* Countdown Timer */
+.countdown-container {
+  background-color: #f4f4f4;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.countdown-image {
+  width: 100%;
+  max-width: 140px;
+  height: 175px;
+  object-fit: cover;
+}
+
+.countdown-content {
+  padding: 16px;
+  text-align: center;
+}
+
+.countdown-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5em;
+  color: #2b2b2c;
+  margin-bottom: 8px;
+}
+
+.countdown-timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.countdown-digit {
+  background-color: #f89617;
+  border-radius: 8px;
+  padding: 6px;
+  min-width: 32px;
+  text-align: center;
+}
+
+.countdown-digit-text {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5em;
+  color: #f4f4f4;
+}
+
+.countdown-separator {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5em;
+  color: #f89617;
+}
+
+/* Back Button Header */
+.back-button-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 16px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.back-button-text {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.43em;
+  color: #686868;
+}
+
+/* Course Header */
+.course-header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.course-header-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.course-title-text {
+  color: #00b342;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px; /* 145.455% */
+}
+
+.course-info-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.course-info-label,
+.course-info-value {
+  font-weight: 500;
+  color: #2b2b2c;
+}
+
+.course-info-value {
+  max-width: 211px;
+}
+
+/* Course Content */
+.course-content-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.course-image-wrapper {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.info-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 164px;
+}
+
+.info-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 8px;
+  background-color: #eafae3;
+  border-radius: 12px;
+  flex: 1;
+}
+
+.info-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.info-card-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2em;
+  color: #00b342;
+  text-align: center;
+}
+
+.info-card-subtitle {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.54em;
+  color: #676767;
+  text-align: center;
+}
+
+.info-cards-row {
+  display: flex;
+  gap: 12px;
+  flex: 1;
+}
+
+/* Course Description */
+.course-description {
+  margin-bottom: 12px;
+}
+
+.course-description-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5em;
+  color: #2b2b2c;
+  margin: 0;
+}
+
+.section-divider {
+  width: 100%;
+  height: 0.5px;
+  background-color: #dbdbdb;
+  margin: 12px 0;
+}
+
+/* Teacher Section */
+.teacher-section {
+  margin-bottom: 12px;
+}
+
+.teacher-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.teacher-info-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.teacher-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 999px;
+  border: 2px solid #40d233;
+  object-fit: cover;
+}
+
+.teacher-text-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.teacher-name {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 2em;
+  color: #2b2b2c;
+  margin: 0;
+}
+
+.teacher-description {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.85em;
+  color: #686868;
+  margin: 0;
+}
+
+.teacher-credentials {
+  display: flex;
+  gap: 8px;
+}
+
+.credential-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 8px;
+  background-color: rgba(201, 201, 201, 0.2);
+  border-radius: 8px;
+  flex: 1;
+  min-height: 60px;
+}
+
+.credential-title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.33em;
+  color: #00b342;
+  text-align: center;
+}
+
+.credential-subtitle {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.54em;
+  color: #676767;
+  text-align: center;
+}
+
+/* What Students Receive Section */
+.benefits-section {
+  margin-bottom: 12px;
+}
+
+.benefits-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.benefits-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.benefits-title {
+  font-weight: 600;
+  color: #2b2b2c;
+  margin: 0;
+}
+
+.benefits-list {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71em;
+  color: #2b2b2c;
+  margin: 0;
+  padding-left: 20px;
+}
+
+/* Sidebar (Desktop) */
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sidebar-availability {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar-availability-badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.sidebar-availability-text {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5em;
+  color: #eb4411;
+}
+
+.sidebar-availability-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eb4411;
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+}
+
+.sidebar-availability-number-text {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.6em;
+  color: #ffffff;
+}
+
+.sidebar-progress-bar {
+  padding: 4px 16px;
+}
+
+.sidebar-form {
+  background-color: #f4f4f4;
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.sidebar-form-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.sidebar-form-title {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.33em;
+  color: #f89617;
+}
+
+.sidebar-countdown {
+  background-color: #f4f4f4;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+}
+
+.sidebar-countdown-image {
+  width: 100%;
+  object-fit: contain;
+}
+
+.sidebar-countdown-content {
+  padding: 16px;
+  text-align: center;
+}
+
+.sidebar-countdown-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5em;
+  color: #2b2b2c;
+  margin-bottom: 8px;
+}
+
+.sidebar-countdown-timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Hidden Old Section */
+.hidden-old-section {
+  display: none;
+}
+
+/* Course image and info cards section */
+.course-image-section {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.info-card-value {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2em;
+  color: #00b342;
+  text-align: center;
+}
+
+.info-card-label {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.54em;
+  color: #676767;
+  text-align: center;
+}
+
+.info-card-full {
+  flex: 1;
+}
+
+.info-card-half {
+  flex: 1;
+}
+
+.info-cards-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 164px;
+  width: 100%;
+}
+
+.form-input {
+  border-color: #e6e6e6 !important;
+  font-size: 16px !important;
+  color: #171717 !important;
+}
+
+.form-input::placeholder {
+  /* Most modern browsers support this now. */
+}
+
+/* Content divider */
+.content-divider {
+  width: 100%;
+  height: 0.5px;
+  background-color: #dbdbdb;
+  margin: 12px 0;
+}
+
+/* Teacher section */
+.teacher-section {
+  margin-bottom: 12px;
+}
+
+.teacher-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.teacher-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.teacher-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 999px;
+  border: 2px solid #40d233;
+  object-fit: cover;
+}
+
+.teacher-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.teacher-name {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 2em;
+  color: #2b2b2c;
+  margin: 0;
+}
+
+.teacher-bio {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.85em;
+  color: #686868;
+  margin: 0;
+}
+
+.teacher-credentials {
+  display: flex;
+  gap: 8px;
+}
+
+.credential-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 8px;
+  background-color: rgba(201, 201, 201, 0.2);
+  border-radius: 8px;
+  flex: 1;
+  min-height: 60px;
+}
+
+.credential-value {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.33em;
+  color: #00b342;
+  text-align: center;
+}
+
+.credential-label {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.54em;
+  color: #676767;
+  text-align: center;
+}
+
+/* Countdown timer compact variant (for sidebar) */
+.countdown-timer-compact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.countdown-item-compact {
+  background-color: #f89617;
+  border-radius: 8px;
+  padding: 6px;
+  min-width: 32px;
+  text-align: center;
+}
+
+.countdown-value-compact {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5em;
+  color: #f4f4f4;
+}
+
+/* Additional utility classes for remaining inline styles */
+.navbar-toggle-mobile {
+  min-height: 55px;
+}
+
+.modal-dialog-medium {
+  width: 450px;
+}
+
+.modal-dialog-small {
+  width: 400px;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.modal-dialog-large {
+  max-width: 688px;
+  border-radius: 16px;
+}
+
+.button-transparent {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.button-padding-zero {
+  padding: 0;
+}
+
+.display-none {
+  display: none;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.section-divider {
+  height: 1px;
+  background-color: #e3e3e3;
+  margin: 24px 0;
+}
+
+.section-divider-small {
+  height: 1px;
+  background-color: #e3e3e3;
+  margin: 16px 0;
+}
+
+.video-thumbnail {
+  border-radius: 8px;
+}
+
+.video-iframe {
+  border-radius: 8px;
+  aspect-ratio: 16/9;
+}
+
+.video-thumbnail-clickable {
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.video-container {
+  width: 300px;
+  height: min-content;
+}
+
+.text-primary-green {
+  color: #097032;
+}
+
+.text-dark {
+  color: #2b2b2c;
+}
+
+.text-gray {
+  color: #555555;
+}
+
+.text-light-gray {
+  color: #969696;
+}
+
+.text-black {
+  color: black;
+}
+
+.font-size-14 {
+  font-size: 14px;
+}
+
+.font-size-16 {
+  font-size: 16px;
+}
+
+.font-size-20 {
+  font-size: 20px;
+}
+
+.font-size-24 {
+  font-size: 24px;
+}
+
+.font-weight-500 {
+  font-weight: 500;
+}
+
+.font-weight-700 {
+  font-weight: 700;
+}
+
+.legend-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #097032;
+}
+
+.legend-title-small {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.countdown-mobile-image {
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+}
+
+.countdown-mobile-container {
+  background-color: #f4f4f4;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.countdown-mobile-content {
+  padding: 16px;
+  text-align: center;
+}
+
+.countdown-mobile-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5em;
+  color: #2b2b2c;
+  margin-bottom: 8px;
+}
+
+.countdown-mobile-timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.countdown-mobile-box {
+  background-color: #f89617;
+  border-radius: 8px;
+  padding: 6px;
+  min-width: 32px;
+  text-align: center;
+}
+
+.countdown-mobile-value {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5em;
+  color: #f4f4f4;
+}
+
+.countdown-mobile-separator {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5em;
+  color: #f89617;
+}
+
+/* Old hidden sections - keep legacy styles for compatibility */
+.old-teacher-section {
+  font-size: 24px;
+  font-weight: 700;
+  color: #097032;
+}
+
+.old-teacher-flex {
+  align-items: center;
+}
+
+.old-teacher-name {
+  color: #333333;
+  font-size: 500;
+}
+
+.old-section-divider {
+  width: 1px;
+  margin: 0 16px;
+  background-color: #d5d5d5;
+}
+
+.old-cert-label {
+  font-size: 14px;
+  color: #4b4b4b;
+  font-weight: 500;
+}
+
+.old-cert-value {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0abe27;
+}
+
+.list-styled {
+  color: #2b2b2c;
+}
+
+
+/* Submit button with green background */
+.submit-button {
+  background-color: #00b342 !important;
+  border-radius: 12px !important;
+  padding: 16px !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  line-height: 1em !important;
+  color: white !important;
+}
+
+/* Success Modal Styles (Figma: 5545-1939) */
+.success-modal-dialog {
+  width: 500px;
+  border-radius: 24px;
+  padding: 0;
+  background: #ffffff;
+}
+
+.success-modal-icon-section {
+  background: #e1f8da;
+  padding: 16px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px 24px 0 0;
+}
+
+.success-modal-icon {
+  width: 150px;
+  height: 150px;
+}
+
+.success-modal-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.success-modal-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.success-modal-title {
+    sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.45;
+  color: #2b2b2c;
+  margin: 0;
+}
+
+.success-modal-message {
+    sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #2b2b2c;
+  text-align: center;
+  margin: 0;
+}
+
+.success-modal-button {
+  background: #00b342;
+  color: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  width: 120px;
+    sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}

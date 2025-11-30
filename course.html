@@ -49,8 +49,10 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/uikit@3.5.4/dist/css/uikit.min.css"
     />
-    <link rel="stylesheet" href="css/app.css" />
-    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <!-- <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/index.css" /> -->
+    <link rel="stylesheet" href="css/course.css" />
     <link href="/Style/sweetalert2.min.css" rel="stylesheet" />
     <!--JS-->
     <script
@@ -69,10 +71,7 @@
       action="./?gidzl=SUKMKd-Zr5zt-nzKVxNMMdFs7bzbjD5LQ_eJ336wqGG-g4zPCkkDNJEjGGCxwO9UPlnCKZ8uTleyUwhQLW"
       id="form1"
     >
-      <div
-        id="app"
-        class="uk-height-viewport uk-offcanvas-content uk-overflow-hidden"
-      >
+      <div class="uk-offcanvas-content uk-overflow-hidden">
         <style>
           .uk-navbar-center:not(:only-child) {
             left: 46% !important;
@@ -86,14 +85,14 @@
         <!----Header, menu -->
         <div id="my-id" class="" uk-offcanvas="overlay: true; mode: slide">
           <div
-            class="uk-offcanvas-bar uk-overflow-auto uk-flex uk-flex-column uk-padding-remove"
+            style="padding: 0 16px"
+            class="uk-offcanvas-bar uk-overflow-auto uk-flex uk-flex-column"
           >
             <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
               <div class="uk-navbar-left">
                 <a
                   href="#my-id"
-                  class="uk-navbar-toggle"
-                  style="min-height: 55px"
+                  class="uk-navbar-toggle navbar-toggle-mobile"
                   uk-toggle
                 >
                   <div id="m_nav_menu" class="m_nav menu">
@@ -193,7 +192,7 @@
               </div>
 
               <div class="uk-navbar-right">
-                <div class="uk-navbar-item pr-0-m">
+                <div class="uk-navbar-item pr-0-m" style="gap: 12px">
                   <a
                     class="pl-15 pr-15 uk-button uk-button-secondary uk-visible@m uk-button--btn-1 uk-button--success-outline mr-10 uk-border-rounded"
                     id="btn-login"
@@ -214,25 +213,211 @@
           </div>
         </div>
         <!----End header, menu-->
-        <div
-          class="uk-container uk-width-expand uk-hidden@m"
-          style="position: fixed; bottom: 0; right: 0; background-color: white"
-        >
+        <!-- Fixed bottom registration bar for mobile (Figma: 5597-1301) -->
+        <div class="uk-hidden@m fixed-bottom-bar">
+          <div class="availability-badge">
+            <span class="availability-text">CHỈ CÒN</span>
+            <div class="availability-number">
+              <span class="availability-number-text">5</span>
+            </div>
+            <span class="availability-text">SUẤT MIỄN PHÍ</span>
+          </div>
+          <div class="progress-bar-container">
+            <svg
+              width="100%"
+              height="8"
+              viewBox="0 0 327 8"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="327" height="8" rx="4" fill="#E4E4E4" />
+              <rect width="136" height="8" rx="4" fill="#EB4411" />
+            </svg>
+          </div>
+
           <button
-            class="uk-button uk-button-secondary mt-8 uk-button--btn-1 uk-button--success uk-width-1-1 uk-border-rounded btn-trial-signup"
-            uk-toggle="target: #modal-dky-hoc"
+            uk-toggle="target: #offcanvas-register"
             type="button"
-            style="margin-bottom: 12px"
+            class="uk-button uk-button-secondary uk-button--btn-1 uk-button--success uk-width-1-1 submit-button"
           >
-            Đăng ký học
+            Đăng ký ngay
           </button>
+        </div>
+
+        <!-- Off-canvas registration form for mobile (Figma: 5597-1715) -->
+        <div
+          id="offcanvas-register"
+          uk-offcanvas="overlay: true; flip: true; mode: slide; bg-close: true"
+        >
+          <div
+            class="uk-offcanvas-bar uk-offcanvas-bar-animation offcanvas-register"
+            style="
+              bottom: 0;
+              top: auto;
+              left: 0;
+              right: 0;
+              width: 100%;
+              max-width: 100%;
+              height: auto;
+              max-height: 90vh;
+            "
+          >
+            <!-- Header -->
+            <div class="offcanvas-header">
+              <h3 class="offcanvas-title">Đăng ký lớp học</h3>
+              <button
+                class="uk-offcanvas-close offcanvas-close-btn"
+                type="button"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5 5L15 15M5 15L15 5"
+                    stroke="#000000"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <!-- Content -->
+            <div class="offcanvas-content">
+              <!-- Availability Badge -->
+              <div class="sidebar-content">
+                <!-- Availability badge -->
+                <div class="sidebar-availability" style="margin-top: 12px">
+                  <div class="availability-badge">
+                    <span class="availability-text">CHỈ CÒN</span>
+                    <div class="availability-number">
+                      <span class="availability-number-text">5</span>
+                    </div>
+                    <span class="availability-text">SUẤT MIỄN PHÍ</span>
+                  </div>
+                  <div class="progress-bar-container">
+                    <svg
+                      width="100%"
+                      height="8"
+                      viewBox="0 0 327 8"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect width="327" height="8" rx="4" fill="#E4E4E4" />
+                      <rect width="136" height="8" rx="4" fill="#EB4411" />
+                    </svg>
+                  </div>
+                </div>
+
+                <!-- Registration form in sidebar (Frame 414) -->
+                <div class="sidebar-form">
+                  <div class="form-header">
+                    <img
+                      src="public/pencil.png"
+                      alt="icon"
+                      width="24"
+                      height="24"
+                    />
+
+                    <span class="form-title"
+                      >Điền thông tin đăng ký lớp học</span
+                    >
+                  </div>
+                  <form class="uk-form-stacked">
+                    <div class="uk-margin-small">
+                      <label class="form-label">Tên của con</label>
+                      <input
+                        class="uk-input form-input"
+                        type="text"
+                        placeholder="Nhập tên của con"
+                      />
+                    </div>
+                    <div class="uk-margin-small">
+                      <label class="form-label">Năm sinh của con</label>
+                      <select class="uk-select form-select" required>
+                        <option value="" selected disabled hidden>
+                          Chọn năm sinh
+                        </option>
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                      </select>
+                    </div>
+                    <div class="uk-margin-small">
+                      <label class="form-label">Số điện thoại</label>
+                      <input
+                        class="uk-input form-input"
+                        type="tel"
+                        placeholder="Nhập số điện thoại phụ huynh"
+                      />
+                    </div>
+                    <div class="uk-margin">
+                      <button
+                        class="uk-button uk-button-secondary uk-button--btn-1 uk-button--success uk-width-1-1 submit-button"
+                        type="button"
+                        onclick="handleRegistration(event)"
+                      >
+                        Đăng ký ngay
+                      </button>
+                    </div>
+                  </form>
+                </div>
+
+                <!-- Countdown timer (Frame 418) -->
+                <div class="sidebar-countdown">
+                  <img
+                    src="public/chipchip.png"
+                    alt="Chipchip"
+                    class="countdown-image"
+                  />
+                  <div class="countdown-content">
+                    <p class="countdown-text">Kết thúc đăng ký sau</p>
+                    <div class="countdown-timer-compact">
+                      <div class="countdown-item-compact">
+                        <span
+                          class="countdown-value-compact"
+                          id="countdown-hours-mobile"
+                          >00</span
+                        >
+                      </div>
+                      <span class="countdown-separator">:</span>
+                      <div class="countdown-item-compact">
+                        <span
+                          class="countdown-value-compact"
+                          id="countdown-minutes-mobile"
+                          >12</span
+                        >
+                      </div>
+                      <span class="countdown-separator">:</span>
+                      <div class="countdown-item-compact">
+                        <span
+                          class="countdown-value-compact"
+                          id="countdown-seconds-mobile"
+                          >38</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <!-- Modal đăng ký học thử -->
         <div id="modal-dky" class="uk-flex-top form-dky" uk-modal>
           <div
-            class="uk-modal-dialog form-dky__dialog uk-modal-body uk-margin-auto-vertical"
-            style="width: 450px"
+            class="uk-modal-dialog form-dky__dialog uk-modal-body uk-margin-auto-vertical modal-dialog-medium"
           >
             <button
               class="uk-modal-close-default"
@@ -258,7 +443,10 @@
                   </div>
                   <div class="uk-margin-small">
                     <label class="uk-form-label">Họ tên con</label>
-                    <div class="uk-form-controls">
+                    <div
+                      class="uk-form-controls"
+                      style="background-color: white"
+                    >
                       <input
                         class="uk-input form-dky-hoc__input"
                         type="text"
@@ -271,9 +459,8 @@
                     <label class="uk-form-label">Năm sinh</label>
                     <div class="uk-form-controls">
                       <button
-                        class="uk-button uk-button-default"
+                        class="uk-button uk-button-default button-padding-zero"
                         type="button"
-                        style="padding: 0"
                       >
                         <input
                           readonly
@@ -293,7 +480,7 @@
                     </div>
                   </div>
 
-                  <div class="uk-margin-small" style="display: none">
+                  <div class="uk-margin-small display-none">
                     <label class="uk-form-label">Thiết bị học tập</label>
                     <div class="uk-form-controls">
                       <select id="drpDevice" class="uk-select">
@@ -303,7 +490,7 @@
                       </select>
                     </div>
                   </div>
-                  <div class="uk-margin-small" style="display: none">
+                  <div class="uk-margin-small display-none">
                     <input
                       class="uk-input form-dky-hoc__input"
                       type="text"
@@ -323,11 +510,7 @@
                       />
                     </div>
                   </div>
-                  <div
-                    class="uk-margin-small"
-                    id="dv-Verify"
-                    style="display: none"
-                  >
+                  <div class="uk-margin-small display-none" id="dv-Verify">
                     <label class="uk-form-label">Nhập mã xác nhận</label>
                     <a href="#" class="uk-form-label getcode"
                       >Lấy mã xác nhận</a
@@ -341,7 +524,7 @@
                       />
                     </div>
                   </div>
-                  <div class="uk-margin-small" uk-grid style="display: none">
+                  <div class="uk-margin-small display-none" uk-grid>
                     <div class="uk-width-1-2">
                       <label class="uk-form-label">Ngày học thử</label>
                       <div class="uk-form-controls">
@@ -394,9 +577,9 @@
                     </div>
                   </div>
                   <div class="dktime"></div>
-                  <div class="uk-margin-small" style="display: none">
+                  <div class="uk-margin-small display-none">
                     <label class="uk-form-label">Mật khẩu</label>
-                    <div class="uk-form-controls" style="position: relative">
+                    <div class="uk-form-controls position-relative">
                       <input
                         class="uk-input form-dky-hoc__input"
                         type="password"
@@ -409,6 +592,7 @@
                   <div class="uk-margin-small uk-text-center">
                     <a
                       id="btn-register"
+                      onclick="handleRegistration(event)"
                       class="pl-10 pl-15-s pr-10 pr-15-s uk-button uk-button-secondary uk-button--btn-1 uk-button--success uk-border-rounded"
                       >Đăng ký ngay</a
                     >
@@ -424,61 +608,115 @@
         </div>
         <!--End Modal đăng ký học thử -->
 
-        <div class="section-20 section-32-m">
-          <div class="uk-container">
+        <div>
+          <div class="uk-container course-container">
+            <!-- Back button header (Figma: Frame 436) -->
+            <div class="back-button-header">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.33333 4.16663L2.5 9.9999M2.5 9.9999L8.33333 15.8332M2.5 9.9999H17.5"
+                  stroke="#3C3C43"
+                  stroke-opacity="0.85"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+
+              <a href="/index.html" class="back-button-text">Quay lại</a>
+            </div>
+
+            <!-- Course title and schedule (Figma: Frame 437) -->
+            <div class="course-header">
+              <div class="course-header-row">
+                <img src="public/book.png" alt="icon" width="24" height="24" />
+
+                <div class="course-title-text">Free Lesson Week 1 October</div>
+              </div>
+              <div class="course-header-row">
+                <img
+                  src="public/calendar.png"
+                  alt="icon"
+                  width="24"
+                  height="24"
+                />
+
+                <div class="course-info-row">
+                  <span
+                    class="course-info-text-mobile course-info-text-desktop course-info-label"
+                    >Thời gian học:</span
+                  >
+                  <span
+                    class="course-info-text-mobile course-info-text-desktop course-info-value"
+                    >20:30 - 03/10/2025</span
+                  >
+                </div>
+              </div>
+            </div>
+
             <div uk-grid>
               <div class="uk-width-expand">
                 <div class="" id="gioithieu">
-                  <div
-                    class="block-01__title mb-16 uk-inline"
-                    style="font-weight: 700"
-                  >
-                    JOURNEY TO STORY LAND CÙNG GIÁO VIÊN NƯỚC NGOÀI
-                  </div>
-                  <div class="mb-24 uk-hidden@s">
+                  <!-- Course image and info cards (Figma: Frame 429) -->
+                  <div class="course-image-section">
+                    <!-- Course image -->
                     <img
-                      style="
-                        aspect-ratio: 3.57 / 2.58;
-                        border-radius: 8px;
-                        object-fit: cover;
-                      "
+                      class="course-image"
                       src="/public/khoa-hoc.webp"
-                      alt="Avatar"
-                      class="uk-object-contain uk-width-expand"
+                      alt="Course image"
                     />
-                  </div>
-                  <div class="uk-flex">
-                    <div class="mr-24 uk-visible@s">
-                      <img
-                        style="
-                          object-fit: cover;
-                          aspect-ratio: 3.57 / 2.58;
-                          border-radius: 8px;
-                          max-width: 357px;
-                        "
-                        src="/public/khoa-hoc.webp"
-                        alt="Avatar"
-                      />
+
+                    <!-- Info cards grid (Figma: Frame 428) -->
+                    <div class="info-cards-grid">
+                      <!-- Card 1: Đối tượng học viên -->
+                      <div class="info-card info-card-full">
+                        <div class="info-card-content">
+                          <span class="info-card-value">4-6 tuổi</span>
+                          <span class="info-card-label"
+                            >Đối tượng học viên</span
+                          >
+                        </div>
+                      </div>
+
+                      <!-- Cards 2 & 3: Online and 45p -->
+                      <div class="info-cards-row">
+                        <div class="info-card info-card-half">
+                          <div class="info-card-content">
+                            <span class="info-card-value">Online</span>
+                            <span class="info-card-label">Hình thức</span>
+                          </div>
+                        </div>
+                        <div class="info-card info-card-half">
+                          <div class="info-card-content">
+                            <span class="info-card-value">45p</span>
+                            <span class="info-card-label">mỗi buổi</span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="block-01__desc" style="color: #555555">
+                  </div>
+
+                  <!-- Course description (Figma: Frame 414) -->
+                  <div class="course-description">
+                    <p class="course-description-text">
                       Khóa học nhằm mang đến môi trường sinh hoạt tiếng Anh lành
                       mạnh cho các bạn nhỏ độ tuổi từ 4 đến 6 tuổi, nâng cao khả
                       năng giao tiếp bằng tiếng Anh bằng việc thực hành nói
                       chuyện trực tiếp với người nước ngoài bản xứ.
-                    </div>
+                    </p>
                   </div>
+
+                  <div class="content-divider"></div>
                 </div>
                 <div>
-                  <div
-                    class="uk-hidden@m"
-                    style="
-                      height: 1px;
-                      background-color: #e3e3e3;
-                      margin: 24px 0;
-                    "
-                  ></div>
                   <div class="">
-                    <div class="uk-hidden@m">
+                    <div class="uk-hidden display-none">
                       <div
                         class=""
                         style="
@@ -574,7 +812,7 @@
                           </li>
                         </ul>
                       </div>
-                      <div class="" style="align-items: center">
+                      <div class="align-items-center">
                         <!-- <button
                                                 class="mb-12 mt-16 uk-button uk-button-secondary uk-button--btn-1 uk-button--success uk-width-1-1 uk-border-rounded btn-trial-signup"
                                                 uk-toggle="target: #modal-dky-hoc" type="button">
@@ -593,439 +831,204 @@
                       </div>
                     </div>
                   </div>
-                  <div
-                    style="
-                      height: 1px;
-                      background-color: #e3e3e3;
-                      margin: 24px 0;
-                    "
-                  ></div>
-                  <div>
-                    <fieldset class="uk-fieldset frmdk">
-                      <legend
-                        class=""
-                        style="
-                          font-size: 24px;
-                          font-weight: 700;
-                          color: #097032;
-                        "
-                        id="popup-title"
-                      >
-                        Giáo viên giảng dạy
-                      </legend>
 
-                      <div
-                        class="uk-flex uk-flex-between uk-text-center mt-16 mb-16"
-                      >
-                        <div
-                          class="uk-flex uk-padding-remove uk-align-center uk-margin-remove"
-                        >
-                          <div
-                            class="mr-12 uk-flex"
-                            style="align-items: center"
-                          >
-                            <img
-                              class="uk-border-circle"
-                              width="40"
-                              height="40"
-                              src="/public/khoa-hoc.webp"
-                              alt="Avatar"
-                            />
-                          </div>
-                          <div
-                            class="uk-flex uk-margin-remove"
-                            style="align-items: center"
-                          >
-                            <div
-                              class="mr-12"
-                              style="color: #333333; font-size: 500"
-                            >
-                              Thầy Edward
-                            </div>
-                            <div
-                              class="uk-grid-small uk-child-width-1-3 uk-text-center"
-                              uk-grid
-                            ></div>
-                          </div>
-                        </div>
-                        <div class="uk-flex uk-visible@s">
-                          <div class="uk-text-left">
-                            <div
-                              style="
-                                font-size: 14px;
-                                color: #4b4b4b;
-                                font-weight: 500;
-                              "
-                            >
-                              Chứng chỉ
-                            </div>
-                            <div
-                              style="
-                                font-size: 18px;
-                                font-weight: 600;
-                                color: #0abe27;
-                              "
-                            >
-                              TESOL, TEFL
-                            </div>
-                          </div>
-                          <div
-                            style="
-                              width: 1px;
-                              margin: 0 16px;
-                              background-color: #d5d5d5;
-                            "
-                          ></div>
-                          <div class="uk-text-left">
-                            <div
-                              style="
-                                font-size: 14px;
-                                color: #4b4b4b;
-                                font-weight: 500;
-                              "
-                            >
-                              Kinh nghiệm
-                            </div>
-                            <div
-                              style="
-                                font-size: 18px;
-                                font-weight: 600;
-                                color: #0abe27;
-                              "
-                            >
-                              3 - 5 năm
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="uk-flex uk-flex-between uk-hidden@s mb-16">
-                        <div class="uk-text-left">
-                          <div
-                            style="
-                              font-size: 14px;
-                              color: #4b4b4b;
-                              font-weight: 500;
-                            "
-                          >
-                            Chứng chỉ
-                          </div>
-                          <div
-                            style="
-                              font-size: 18px;
-                              font-weight: 600;
-                              color: #0abe27;
-                            "
-                          >
-                            TESOL, TEFL
-                          </div>
-                        </div>
-                        <div
-                          style="
-                            width: 1px;
-                            margin: 0 16px;
-                            background-color: #d5d5d5;
-                          "
-                        ></div>
-                        <div class="uk-text-left">
-                          <div
-                            style="
-                              font-size: 14px;
-                              color: #4b4b4b;
-                              font-weight: 500;
-                            "
-                          >
-                            Kinh nghiệm
-                          </div>
-                          <div
-                            style="
-                              font-size: 18px;
-                              font-weight: 600;
-                              color: #0abe27;
-                            "
-                          >
-                            3 - 5 năm
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        class="mb-16 uk-hidden@s uk-position-relative"
-                        uk-toggle="target: #modal-giao-vien"
-                      >
+                  <!-- Teacher section (Figma: Frame 397) -->
+                  <div class="teacher-section">
+                    <div class="teacher-container">
+                      <!-- Teacher info -->
+                      <div class="teacher-info">
                         <img
-                          uk-video
-                          style="border-radius: 8px"
-                          src="/public/image1.webp"
-                          alt="Avatar"
-                          class="uk-object-contain uk-width-expand"
-                        />
-                        <svg
-                          id="icon-play"
+                          class="teacher-avatar"
+                          src="public/image1.webp"
                           width="64"
-                          class="uk-position-center"
                           height="64"
                           viewBox="0 0 64 64"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <circle
-                            opacity="0.4"
-                            cx="32"
-                            cy="32"
-                            r="32"
-                            fill="#66DB53"
-                          />
-                          <circle cx="32" cy="32" r="24" fill="#66DB53" />
-                          <path
-                            d="M40.6154 29.5941C42.4615 30.6634 42.4615 33.3366 40.6154 34.4059L28.1538 41.6237C26.3077 42.693 24 41.3563 24 39.2177L24 24.7823C24 22.6437 26.3077 21.307 28.1538 22.3763L40.6154 29.5941Z"
-                            fill="white"
-                          />
-                        </svg>
-                      </div>
-                      <div class="uk-flex">
-                        <div
-                          class="block-01__desc block-01__desc--fz-18 uk-margin uk-width-expand"
-                          style="color: #2b2b2c"
-                          id="popup-quote"
-                        >
-                          “Tôi có thể dạy từ các bạn mới bắt đầu đến các bạn đã
-                          có kiến thức nền và đang muốn cải thiện thêm vốn tiếng
-                          Anh của mình. Khi dạy trẻ em, tôi sử dụng linh hoạt
-                          nhiều phương pháp khác nhau. Tôi tin rằng học tiếng
-                          Anh với các bạn nhỏ nên là một quá trình thú vị và hấp
-                          dẫn. Vì vậy, tôi luôn tâm niệm rằng học sinh của mình
-                          phải có nhiều niềm vui trong lớp.”
-                        </div>
-                        <div
-                          class="ml-24 uk-visible@s uk-position-relative"
-                          style="width: 300px; height: min-content"
-                          uk-toggle="target: #modal-giao-vien"
-                        >
-                          <img
-                            style="border-radius: 8px; cursor: pointer"
-                            src="/public/image1.webp"
-                            alt="Avatar"
-                            class="uk-object-contain uk-width-expand"
-                          />
-                          <svg
-                            width="48"
-                            id="icon-play"
-                            class="uk-position-center uk-light"
-                            style="cursor: pointer"
-                            height="48"
-                            viewBox="0 0 64 64"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <circle
-                              opacity="0.4"
-                              cx="32"
-                              cy="32"
-                              r="32"
-                              fill="#66DB53"
-                            />
-                            <circle cx="32" cy="32" r="24" fill="#66DB53" />
-                            <path
-                              d="M40.6154 29.5941C42.4615 30.6634 42.4615 33.3366 40.6154 34.4059L28.1538 41.6237C26.3077 42.693 24 41.3563 24 39.2177L24 24.7823C24 22.6437 26.3077 21.307 28.1538 22.3763L40.6154 29.5941Z"
-                              fill="white"
-                            />
-                          </svg>
+                          %3E%3Ccircle
+                          cx="32"
+                          cy="32"
+                          r="31"
+                          fill="%23E0E0E0"
+                          stroke="%2340D233"
+                        />
+                        <div class="teacher-details">
+                          <h3 class="teacher-name">Mr. Minh</h3>
+                          <p class="teacher-bio">
+                            Thầy Minh là một giáo viên tiếng Anh nhiệt huyết,
+                            luôn tạo ra không khí vui vẻ và thân thiện trong lớp
+                            học. Với nhiều năm kinh nghiệm giảng dạy cho trẻ em.
+                          </p>
                         </div>
                       </div>
-                    </fieldset>
+
+                      <!-- Teacher credentials -->
+                      <div class="teacher-credentials">
+                        <div class="credential-card">
+                          <span class="credential-value">TEFL, TOEIC</span>
+                          <span class="credential-label">Chứng chỉ</span>
+                        </div>
+                        <div class="credential-card">
+                          <span class="credential-value">1-3 năm</span>
+                          <span class="credential-label">Kinh nghiệm</span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div
-                    style="
-                      height: 1px;
-                      background-color: #e3e3e3;
-                      margin: 24px 0;
-                    "
-                  ></div>
-                  <div>
-                    <legend
-                      class="mb-16"
-                      style="font-size: 24px; font-weight: 700; color: #097032"
-                    >
-                      Mục tiêu khóa học
-                    </legend>
-                    <ul
-                      class="uk-list uk-list-disc uk-margin-remove"
-                      style="color: #2b2b2c"
-                    >
-                      <li class="uk-margin-remove">
-                        Hình thành phản xạ đọc, nghe, hiểu và nói tiếng Anh một
-                        cách tự nhiên
-                      </li>
-                      <li class="uk-margin-remove">
-                        Làm giàu vốn từ vựng và hoàn thiện khả năng ngữ pháp
-                        nhanh chóng
-                      </li>
-                      <li class="uk-margin-remove">
-                        Được nuôi dưỡng thói quen nghe và đọc sách tiếng Anh một
-                        cách hiệu quả
-                      </li>
-                      <li class="uk-margin-remove">
-                        Kích thích trí tưởng tượng, khả năng sáng tạo
-                      </li>
-                      <li class="uk-margin-remove">
-                        Nhận vô số quà tặng và chứng nhận hoàn thành khi tham
-                        gia tích cực vào vòng thử thách sau mỗi buổi học
-                      </li>
-                    </ul>
-                  </div>
-                  <div
-                    style="
-                      height: 1px;
-                      background-color: #e3e3e3;
-                      margin: 24px 0;
-                    "
-                  ></div>
-                  <div>
-                    <legend
-                      class="mb-16"
-                      style="font-size: 24px; font-weight: 700; color: #097032"
-                    >
-                      Nội dung khóa học
-                    </legend>
-                    <ul
-                      class="uk-list uk-list-disc uk-margin-remove"
-                      style="color: #2b2b2c"
-                    >
-                      <li class="uk-margin-remove">
-                        Qui ad blanditiis qui suscipit hic iure possimus. Quia
-                        qui illum sed repudiandae. Sit officia magnam
-                        consequatur. Ut et natus facere porro laudantium aut
-                        ratione aperiam.
-                      </li>
-                      <li class="uk-margin-remove">
-                        Qui ad blanditiis qui suscipit hic iure possimus. Quia
-                        qui illum sed repudiandae. Sit officia magnam
-                        consequatur. Ut et natus facere porro laudantium aut
-                        ratione aperiam.
-                      </li>
-                      <li class="uk-margin-remove">
-                        Qui ad blanditiis qui suscipit hic iure possimus. Quia
-                        qui illum sed repudiandae. Sit officia magnam
-                        consequatur. Ut et natus facere porro laudantium aut
-                        ratione aperiam.
-                      </li>
-                    </ul>
+
+                  <div class="content-divider"></div>
+
+                  <!-- What students will receive (Figma: Frame 415) -->
+                  <div class="benefits-section">
+                    <div class="benefits-container">
+                      <div class="benefits-header">
+                        <img
+                          src="public/medal.png"
+                          alt="icon"
+                          width="24"
+                          height="24"
+                        />
+
+                        <h3
+                          class="course-benefit-title-mobile course-benefit-title-desktop benefits-title"
+                        >
+                          Con sẽ nhận được gì khi tham gia lớp học?
+                        </h3>
+                      </div>
+                      <ul class="benefits-list">
+                        <li>Tham gia lớp học 0đ</li>
+                        <li>Được cung cấp kiến thức</li>
+                        <li>Được làm bài kiểm tra năng lực</li>
+                        <li>Giao lưu với các bạn cùng trang lứa</li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
+
+              <!-- Sidebar (desktop only) -->
               <div class="uk-width-1-3@m uk-visible@m">
                 <div class="" uk-sticky="end: !.uk-height-large; offset: 100">
-                  <div
-                    class=""
-                    style="
-                      background-color: #f7f7f7;
-                      border-radius: 12px;
-                      padding: 16px;
-                    "
-                  >
-                    <ul
-                      class="uk-nav uk-nav-default uk-nav--about"
-                      id="mn-about"
-                    >
-                      <li class="uk-flex uk-flex-between">
-                        <span>Trạng thái</span>
-                        <span
-                          style="
-                            font-size: 14px;
-                            font-weight: 600;
-                            color: #098406;
-                            background-color: #d3ffcc;
-                            border-radius: 16px;
-                            padding: 4px 12px;
-                            width: fit-content;
-                          "
-                        >
-                          Sắp diễn ra
-                        </span>
-                      </li>
-                      <div
-                        style="
-                          height: 1px;
-                          background-color: #e3e3e3;
-                          margin: 16px 0;
-                        "
-                      ></div>
-                      <li class="uk-flex uk-flex-between">
-                        <span>Độ tuổi phù hợp</span>
-                        <span style="font-size: 14px">
-                          <strong style="font-size: 16px; color: black"
-                            >4 - 6</strong
-                          >
-                          tuổi
-                        </span>
-                      </li>
-                      <div
-                        style="
-                          height: 1px;
-                          background-color: #e3e3e3;
-                          margin: 16px 0;
-                        "
-                      ></div>
-                      <li class="uk-flex uk-flex-between">
-                        <span>Số buổi học</span>
-                        <span style="font-size: 14px">
-                          <strong style="font-size: 16px; color: black"
-                            >4</strong
-                          >
-                          buổi
-                        </span>
-                      </li>
-                      <div
-                        style="
-                          height: 1px;
-                          background-color: #e3e3e3;
-                          margin: 16px 0;
-                        "
-                      ></div>
-                      <li class="uk-flex uk-flex-between">
-                        <span>Thời lượng</span>
-                        <span style="font-size: 14px">
-                          <strong style="font-size: 16px; color: black"
-                            >45p</strong
-                          >
-                          mỗi buổi
-                        </span>
-                      </li>
-                      <div
-                        style="
-                          height: 1px;
-                          background-color: #e3e3e3;
-                          margin: 16px 0;
-                        "
-                      ></div>
-                      <li>
-                        <span>Thời gian học</span>
-                        <div
-                          class="mt-4"
-                          style="font-size: 16px; font-weight: 500"
-                        >
-                          8h30 thứ Hai & thứ Tư hàng tuần Bắt đầu từ ngày 24/01
+                  <!-- Registration sidebar content from Figma desktop design (Frame 417) -->
+                  <div class="sidebar-content">
+                    <!-- Availability badge -->
+                    <div class="sidebar-availability">
+                      <div class="availability-badge">
+                        <span class="availability-text">CHỈ CÒN</span>
+                        <div class="availability-number">
+                          <span class="availability-number-text">5</span>
                         </div>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="" style="align-items: center">
-                    <button
-                      class="mb-12 mt-16 uk-button uk-button-secondary uk-button--btn-1 uk-button--success uk-width-1-1 uk-border-rounded btn-trial-signup"
-                      uk-toggle="target: #modal-dky-hoc"
-                      type="button"
-                    >
-                      Đăng ký học
-                    </button>
-                    <div
-                      class="block-01__desc mr-16"
-                      style="
-                        color: #555555;
-                        display: flex;
-                        justify-content: center;
-                      "
-                    >
-                      102 học sinh đã đăng ký
+                        <span class="availability-text">SUẤT MIỄN PHÍ</span>
+                      </div>
+                      <div class="progress-bar-container">
+                        <svg
+                          width="100%"
+                          height="8"
+                          viewBox="0 0 327 8"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <rect width="327" height="8" rx="4" fill="#E4E4E4" />
+                          <rect width="136" height="8" rx="4" fill="#EB4411" />
+                        </svg>
+                      </div>
+                    </div>
+
+                    <!-- Registration form in sidebar (Frame 414) -->
+                    <div class="sidebar-form">
+                      <div class="form-header">
+                        <img
+                          src="public/pencil.png"
+                          alt="icon"
+                          width="24"
+                          height="24"
+                        />
+
+                        <span class="form-title"
+                          >Điền thông tin đăng ký lớp học</span
+                        >
+                      </div>
+                      <form class="uk-form-stacked">
+                        <div class="uk-margin-small">
+                          <label class="form-label">Tên của con</label>
+                          <input
+                            class="uk-input form-input"
+                            type="text"
+                            placeholder="Nhập tên của con"
+                          />
+                        </div>
+                        <div class="uk-margin-small">
+                          <label class="form-label">Năm sinh của con</label>
+                          <select class="uk-select form-select" required>
+                            <option value="" selected disabled hidden>
+                              Chọn năm sinh
+                            </option>
+                            <option value="2013">2013</option>
+                            <option value="2014">2014</option>
+                            <option value="2015">2015</option>
+                            <option value="2016">2016</option>
+                            <option value="2017">2017</option>
+                            <option value="2018">2018</option>
+                            <option value="2019">2019</option>
+                            <option value="2020">2020</option>
+                            <option value="2021">2021</option>
+                          </select>
+                        </div>
+                        <div class="uk-margin-small">
+                          <label class="form-label">Số điện thoại</label>
+                          <input
+                            class="uk-input form-input"
+                            type="tel"
+                            placeholder="Nhập số điện thoại phụ huynh"
+                          />
+                        </div>
+                        <div class="uk-margin">
+                          <button
+                            class="uk-button uk-button-secondary uk-button--btn-1 uk-button--success uk-width-1-1 submit-button"
+                            type="button"
+                            onclick="handleRegistration(event)"
+                          >
+                            Đăng ký ngay
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+
+                    <!-- Countdown timer (Frame 418) -->
+                    <div class="sidebar-countdown">
+                      <img
+                        src="public/chipchip.png"
+                        alt="Chipchip"
+                        class="countdown-image"
+                      />
+                      <div class="countdown-content">
+                        <p class="countdown-text">Kết thúc đăng ký sau</p>
+                        <div class="countdown-timer-compact">
+                          <div class="countdown-item-compact">
+                            <span
+                              class="countdown-value-compact"
+                              id="countdown-hours-desktop"
+                              >00</span
+                            >
+                          </div>
+                          <span class="countdown-separator">:</span>
+                          <div class="countdown-item-compact">
+                            <span
+                              class="countdown-value-compact"
+                              id="countdown-minutes-desktop"
+                              >12</span
+                            >
+                          </div>
+                          <span class="countdown-separator">:</span>
+                          <div class="countdown-item-compact">
+                            <span
+                              class="countdown-value-compact"
+                              id="countdown-seconds-desktop"
+                              >38</span
+                            >
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1034,10 +1037,233 @@
           </div>
         </div>
 
+        <!-- Old teacher section structure kept for reference but hidden -->
+        <div class="display-none">
+          <div>
+            <fieldset class="uk-fieldset frmdk">
+              <legend class="legend-title" id="popup-title">
+                Giáo viên giảng dạy (old)
+              </legend>
+
+              <div class="uk-flex uk-flex-between uk-text-center mt-16 mb-16">
+                <div
+                  class="uk-flex uk-padding-remove uk-align-center uk-margin-remove"
+                >
+                  <div class="mr-12 uk-flex align-items-center">
+                    <img
+                      class="uk-border-circle"
+                      width="40"
+                      height="40"
+                      src="/public/khoa-hoc.webp"
+                      alt="Avatar"
+                    />
+                  </div>
+                  <div
+                    class="uk-flex uk-margin-remove"
+                    style="align-items: center"
+                  >
+                    <div class="mr-12" style="color: #333333; font-size: 500">
+                      Thầy Edward
+                    </div>
+                    <div
+                      class="uk-grid-small uk-child-width-1-3 uk-text-center"
+                      uk-grid
+                    ></div>
+                  </div>
+                </div>
+                <div class="uk-flex uk-visible@s">
+                  <div class="uk-text-left">
+                    <div
+                      style="font-size: 14px; color: #4b4b4b; font-weight: 500"
+                    >
+                      Chứng chỉ
+                    </div>
+                    <div
+                      style="font-size: 18px; font-weight: 600; color: #0abe27"
+                    >
+                      TESOL, TEFL
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      width: 1px;
+                      margin: 0 16px;
+                      background-color: #d5d5d5;
+                    "
+                  ></div>
+                  <div class="uk-text-left">
+                    <div
+                      style="font-size: 14px; color: #4b4b4b; font-weight: 500"
+                    >
+                      Kinh nghiệm
+                    </div>
+                    <div
+                      style="font-size: 18px; font-weight: 600; color: #0abe27"
+                    >
+                      3 - 5 năm
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="uk-flex uk-flex-between uk-hidden@s mb-16">
+                <div class="uk-text-left">
+                  <div
+                    style="font-size: 14px; color: #4b4b4b; font-weight: 500"
+                  >
+                    Chứng chỉ
+                  </div>
+                  <div
+                    style="font-size: 18px; font-weight: 600; color: #0abe27"
+                  >
+                    TESOL, TEFL
+                  </div>
+                </div>
+                <div
+                  style="width: 1px; margin: 0 16px; background-color: #d5d5d5"
+                ></div>
+                <div class="uk-text-left">
+                  <div
+                    style="font-size: 14px; color: #4b4b4b; font-weight: 500"
+                  >
+                    Kinh nghiệm
+                  </div>
+                  <div
+                    style="font-size: 18px; font-weight: 600; color: #0abe27"
+                  >
+                    3 - 5 năm
+                  </div>
+                </div>
+              </div>
+              <div
+                class="mb-16 uk-hidden@s uk-position-relative"
+                uk-toggle="target: #modal-giao-vien"
+              >
+                <img
+                  uk-video
+                  class="uk-object-contain uk-width-expand video-thumbnail"
+                  src="/public/image1.webp"
+                  alt="Avatar"
+                />
+                <svg
+                  id="icon-play"
+                  width="64"
+                  class="uk-position-center"
+                  height="64"
+                  viewBox="0 0 64 64"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle opacity="0.4" cx="32" cy="32" r="32" fill="#66DB53" />
+                  <circle cx="32" cy="32" r="24" fill="#66DB53" />
+                  <path
+                    d="M40.6154 29.5941C42.4615 30.6634 42.4615 33.3366 40.6154 34.4059L28.1538 41.6237C26.3077 42.693 24 41.3563 24 39.2177L24 24.7823C24 22.6437 26.3077 21.307 28.1538 22.3763L40.6154 29.5941Z"
+                    fill="white"
+                  />
+                </svg>
+              </div>
+              <div class="uk-flex">
+                <div
+                  class="block-01__desc block-01__desc--fz-18 uk-margin uk-width-expand text-dark"
+                  id="popup-quote"
+                >
+                  “Tôi có thể dạy từ các bạn mới bắt đầu đến các bạn đã có kiến
+                  thức nền và đang muốn cải thiện thêm vốn tiếng Anh của mình.
+                  Khi dạy trẻ em, tôi sử dụng linh hoạt nhiều phương pháp khác
+                  nhau. Tôi tin rằng học tiếng Anh với các bạn nhỏ nên là một
+                  quá trình thú vị và hấp dẫn. Vì vậy, tôi luôn tâm niệm rằng
+                  học sinh của mình phải có nhiều niềm vui trong lớp.”
+                </div>
+                <div
+                  class="ml-24 uk-visible@s uk-position-relative video-container"
+                  uk-toggle="target: #modal-giao-vien"
+                >
+                  <img
+                    class="uk-object-contain uk-width-expand video-thumbnail-clickable"
+                    src="/public/image1.webp"
+                    alt="Avatar"
+                  />
+                  <svg
+                    width="48"
+                    id="icon-play"
+                    class="uk-position-center uk-light"
+                    style="cursor: pointer"
+                    height="48"
+                    viewBox="0 0 64 64"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      opacity="0.4"
+                      cx="32"
+                      cy="32"
+                      r="32"
+                      fill="#66DB53"
+                    />
+                    <circle cx="32" cy="32" r="24" fill="#66DB53" />
+                    <path
+                      d="M40.6154 29.5941C42.4615 30.6634 42.4615 33.3366 40.6154 34.4059L28.1538 41.6237C26.3077 42.693 24 41.3563 24 39.2177L24 24.7823C24 22.6437 26.3077 21.307 28.1538 22.3763L40.6154 29.5941Z"
+                      fill="white"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <div
+            style="height: 1px; background-color: #e3e3e3; margin: 24px 0"
+          ></div>
+          <div>
+            <legend class="mb-16 legend-title">Mục tiêu khóa học</legend>
+            <ul class="uk-list uk-list-disc uk-margin-remove list-styled">
+              <li class="uk-margin-remove">
+                Hình thành phản xạ đọc, nghe, hiểu và nói tiếng Anh một cách tự
+                nhiên
+              </li>
+              <li class="uk-margin-remove">
+                Làm giàu vốn từ vựng và hoàn thiện khả năng ngữ pháp nhanh chóng
+              </li>
+              <li class="uk-margin-remove">
+                Được nuôi dưỡng thói quen nghe và đọc sách tiếng Anh một cách
+                hiệu quả
+              </li>
+              <li class="uk-margin-remove">
+                Kích thích trí tưởng tượng, khả năng sáng tạo
+              </li>
+              <li class="uk-margin-remove">
+                Nhận vô số quà tặng và chứng nhận hoàn thành khi tham gia tích
+                cực vào vòng thử thách sau mỗi buổi học
+              </li>
+            </ul>
+          </div>
+          <div
+            style="height: 1px; background-color: #e3e3e3; margin: 24px 0"
+          ></div>
+          <div>
+            <legend class="mb-16 legend-title">Nội dung khóa học</legend>
+            <ul class="uk-list uk-list-disc uk-margin-remove list-styled">
+              <li class="uk-margin-remove">
+                Qui ad blanditiis qui suscipit hic iure possimus. Quia qui illum
+                sed repudiandae. Sit officia magnam consequatur. Ut et natus
+                facere porro laudantium aut ratione aperiam.
+              </li>
+              <li class="uk-margin-remove">
+                Qui ad blanditiis qui suscipit hic iure possimus. Quia qui illum
+                sed repudiandae. Sit officia magnam consequatur. Ut et natus
+                facere porro laudantium aut ratione aperiam.
+              </li>
+              <li class="uk-margin-remove">
+                Qui ad blanditiis qui suscipit hic iure possimus. Quia qui illum
+                sed repudiandae. Sit officia magnam consequatur. Ut et natus
+                facere porro laudantium aut ratione aperiam.
+              </li>
+            </ul>
+          </div>
+        </div>
+
         <div id="modal-giao-vien" class="uk-flex-top" uk-modal>
           <div
-            class="uk-modal-dialog uk-padding-remove uk-modal-body uk-margin-auto-vertical"
-            style="max-width: 688px; border-radius: 16px"
+            class="uk-modal-dialog uk-padding-remove uk-modal-body uk-margin-auto-vertical modal-dialog-large"
           >
             <button
               class="uk-modal-close-default"
@@ -1067,8 +1293,7 @@
             <div class="mb-16">
               <iframe
                 uk-video
-                style="border-radius: 8px; aspect-ratio: 16/9"
-                class="uk-object-contain uk-width-expand"
+                class="uk-object-contain uk-width-expand video-iframe"
                 width="420"
                 allow="autoplay"
                 src="https://www.youtube.com/embed/_lj327AsvCs?autoplay=1"
@@ -1081,8 +1306,7 @@
         <!-- Modal đăng ký học -->
         <div id="modal-dky-hoc" class="uk-flex-top form-dky" uk-modal>
           <div
-            class="uk-modal-dialog form-dky__dialog uk-modal-body uk-margin-auto-vertical"
-            style="width: 400px; border-radius: 16px; padding: 24px"
+            class="uk-modal-dialog form-dky__dialog uk-modal-body uk-margin-auto-vertical modal-dialog-small"
           >
             <button
               class="uk-modal-close-default"
@@ -1113,16 +1337,14 @@
               <form class="uk-form-stacked">
                 <fieldset class="uk-fieldset frmdk">
                   <legend
-                    class="uk-legend block-01__title block-01__title--fz-32 uk-text-left"
+                    class="uk-legend block-01__title block-01__title--fz-32 uk-text-left legend-title-small"
                     id="popup-title"
-                    style="font-size: 20px; font-weight: 700"
                   >
                     Đăng ký tham gia khóa học
                   </legend>
                   <div
-                    class="block-01__desc block-01__desc--fz-18 uk-margin"
+                    class="block-01__desc block-01__desc--fz-18 uk-margin text-gray"
                     id="popup-quote"
-                    style="color: #555555"
                   >
                     Chip Chip sẽ liên hệ và gửi đường dẫn tham gia chương trình
                     qua email của bạn
@@ -1908,10 +2130,97 @@
                           isMobile = true;
                         return isMobile;
                       }
+
+                      // Countdown Timer Function
+                      function startCountdown(endTime) {
+                        let interval;
+                        let lastSecond = -1;
+
+                        function updateCountdown() {
+                          const now = new Date().getTime();
+                          const distance = endTime - now;
+
+                          if (distance < 0) {
+                            // Countdown finished - clear interval and set to 00:00:00
+                            if (interval) clearInterval(interval);
+                            document.getElementById(
+                              "countdown-hours-mobile"
+                            ).textContent = "00";
+                            document.getElementById(
+                              "countdown-minutes-mobile"
+                            ).textContent = "00";
+                            document.getElementById(
+                              "countdown-seconds-mobile"
+                            ).textContent = "00";
+                            document.getElementById(
+                              "countdown-hours-desktop"
+                            ).textContent = "00";
+                            document.getElementById(
+                              "countdown-minutes-desktop"
+                            ).textContent = "00";
+                            document.getElementById(
+                              "countdown-seconds-desktop"
+                            ).textContent = "00";
+                            return;
+                          }
+
+                          // Calculate time remaining
+                          const hours = Math.floor(distance / (1000 * 60 * 60));
+                          const minutes = Math.floor(
+                            (distance % (1000 * 60 * 60)) / (1000 * 60)
+                          );
+                          const seconds = Math.floor(
+                            (distance % (1000 * 60)) / 1000
+                          );
+
+                          // Only update if second has changed to prevent flickering
+                          if (seconds !== lastSecond) {
+                            lastSecond = seconds;
+
+                            // Format to 2 digits
+                            const formatTime = (time) =>
+                              time.toString().padStart(2, "0");
+
+                            // Update mobile countdown
+                            document.getElementById(
+                              "countdown-hours-mobile"
+                            ).textContent = formatTime(hours);
+                            document.getElementById(
+                              "countdown-minutes-mobile"
+                            ).textContent = formatTime(minutes);
+                            document.getElementById(
+                              "countdown-seconds-mobile"
+                            ).textContent = formatTime(seconds);
+
+                            // Update desktop countdown
+                            document.getElementById(
+                              "countdown-hours-desktop"
+                            ).textContent = formatTime(hours);
+                            document.getElementById(
+                              "countdown-minutes-desktop"
+                            ).textContent = formatTime(minutes);
+                            document.getElementById(
+                              "countdown-seconds-desktop"
+                            ).textContent = formatTime(seconds);
+                          }
+                        }
+
+                        // Update immediately
+                        updateCountdown();
+
+                        // Update more frequently (every 100ms) for smoother countdown
+                        interval = setInterval(updateCountdown, 100);
+
+                        return interval;
+                      }
+
+                      // Start countdown - set end time to 12 hours from now
+                      // You can change this to any specific date/time you want
+                      const countdownEndTime =
+                        new Date().getTime() + 12 * 60 * 60 * 1000; // 12 hours from now
+                      startCountdown(countdownEndTime);
                     </script>
                     <script src="/Js/sweetalert2.all.min.js"></script>
-
-                    <!--End footer-->
                   </div>
                 </fieldset>
               </form>
@@ -1920,5 +2229,52 @@
         </div>
       </div>
     </form>
+
+    <!-- Success Modal (Figma: 5545-1939) -->
+    <div id="modal-success" class="uk-flex-top" uk-modal>
+      <div
+        class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical success-modal-dialog"
+      >
+        <button class="uk-modal-close-default" type="button" uk-close></button>
+
+        <div>
+          <!-- Success Icon -->
+          <div class="success-modal-icon-section">
+            <img
+              src="public/chipchip1.png"
+              alt="Success"
+              class="success-modal-icon"
+            />
+          </div>
+
+          <!-- Success Content -->
+          <div class="success-modal-content">
+            <div class="success-modal-text-container">
+              <h3 class="success-modal-title">Đăng ký thành công</h3>
+              <p class="success-modal-message">
+                Cảm ơn ba/mẹ đã đăng ký lớp học Free lesson. Chip Chip sẽ sớm
+                liên hệ lại với ba/mẹ để gửi link buổi học
+              </p>
+            </div>
+            <button
+              class="uk-button success-modal-button"
+              uk-toggle="target: #modal-success"
+              type="button"
+            >
+              Đồng ý
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function handleRegistration(event) {
+        event.preventDefault();
+        UIkit.modal("#modal-dky").hide();
+        setTimeout(function () {
+          UIkit.modal("#modal-success").show();
+        }, 300);
+      }
+    </script>
   </body>
 </html>

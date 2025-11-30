@@ -49,7 +49,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/uikit@3.5.4/dist/css/uikit.min.css"
     />
-    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/app.css" />
     <link rel="stylesheet" href="css/index.css" />
     <link href="/Style/sweetalert2.min.css" rel="stylesheet" />
     <!--JS-->
@@ -86,8 +86,7 @@
         <!----Header, menu -->
         <div id="my-id" class="" uk-offcanvas="overlay: true; mode: slide">
           <div
-            class="uk-offcanvas-bar uk-overflow-auto uk-flex uk-flex-column"
-            style="padding: 0 16px"
+            class="uk-offcanvas-bar uk-overflow-auto uk-flex uk-flex-column uk-padding-remove"
           >
             <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
               <div class="uk-navbar-left">
@@ -192,8 +191,9 @@
                   <li><a href="lien-he.html">Liên hệ</a></li>
                 </ul>
               </div>
+
               <div class="uk-navbar-right">
-                <div class="uk-navbar-item pr-0-m" style="gap: 12px">
+                <div class="uk-navbar-item pr-0-m">
                   <a
                     class="pl-15 pr-15 uk-button uk-button-secondary uk-visible@m uk-button--btn-1 uk-button--success-outline mr-10 uk-border-rounded"
                     id="btn-login"
@@ -214,6 +214,19 @@
           </div>
         </div>
         <!----End header, menu-->
+        <div
+          class="uk-container uk-width-expand uk-hidden@m"
+          style="position: fixed; bottom: 0; right: 0; background-color: white"
+        >
+          <button
+            class="uk-button uk-button-secondary mt-8 uk-button--btn-1 uk-button--success uk-width-1-1 uk-border-rounded btn-trial-signup"
+            uk-toggle="target: #modal-dky-hoc"
+            type="button"
+            style="margin-bottom: 12px"
+          >
+            Đăng ký học
+          </button>
+        </div>
 
         <!-- Modal đăng ký học thử -->
         <div id="modal-dky" class="uk-flex-top form-dky" uk-modal>
@@ -411,1195 +424,659 @@
         </div>
         <!--End Modal đăng ký học thử -->
 
-        <!-- Main banner -->
-        <div>
-          <!-- for desktop -->
-          <div style="position: relative" class="uk-visible@l mb-80">
-            <img
-              src="/public/main-baner.svg"
-              alt="banner"
-              style="width: 100%; margin-top: -80px"
-            />
-            <div
-              style="
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-              "
-            >
-              <div
-                class="uk-position-relative uk-container"
-                style="width: 100%; height: 100%"
-              >
-                <div class="uk-position-center-left ml-40">
-                  <div style="max-width: 563px; width: 100%">
-                    <div
-                      style="font-size: 46px; font-weight: 700; color: #063f0c"
-                    >
-                      Khóa học miễn phí <br />
-                      với giáo viên nước ngoài
-                    </div>
-                    <div
-                      class="mt-12 mb-24"
+        <div class="section-20 section-32-m">
+          <div class="uk-container">
+            <div uk-grid>
+              <div class="uk-width-expand">
+                <div class="" id="gioithieu">
+                  <div
+                    class="block-01__title mb-16 uk-inline"
+                    style="font-weight: 700"
+                  >
+                    JOURNEY TO STORY LAND CÙNG GIÁO VIÊN NƯỚC NGOÀI
+                  </div>
+                  <div class="mb-24 uk-hidden@s">
+                    <img
                       style="
-                        background-image: linear-gradient(
-                          to right,
-                          rgba(249, 111, 33, 0),
-                          #f96f21
-                        );
-                        height: 8px;
-                        width: 100%;
-                        border-radius: 999px;
+                        aspect-ratio: 3.57 / 2.58;
+                        border-radius: 8px;
+                        object-fit: cover;
                       "
-                    ></div>
-                    <div style="font-weight: 500; color: #00820d">
-                      Public courses là các khoá học tiếng Anh ngắn hạn miễn phí
-                      với giáo viên nước ngoài được tổ chức bởi Chip Chip theo
-                      mô hình lớp học cỡ vừa từ 8-100 học sinh.
-                    </div>
-                    <div class="uk-flex uk-flex-between uk-text-center" d>
-                      <div>
-                        <div class="uk-text-left" style="width: 115px">
-                          <svg
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M5 5C3.34315 5 2 6.34315 2 8V16C2 17.6569 3.34315 19 5 19H14C15.6569 19 17 17.6569 17 16V15.4286L18.8375 16.7411C20.1613 17.6866 22 16.7404 22 15.1136V8.88638C22 7.25963 20.1613 6.31339 18.8375 7.25891L17 8.57143V8C17 6.34315 15.6569 5 14 5H5Z"
-                              fill="#58D583"
-                            />
-                          </svg>
-
-                          <div
-                            style="color: #053810; font-size: 13px"
-                            class="mt-4"
-                          >
-                            Lớp học Online
-                          </div>
-                        </div>
-                      </div>
-                      <div
+                      src="/public/khoa-hoc.webp"
+                      alt="Avatar"
+                      class="uk-object-contain uk-width-expand"
+                    />
+                  </div>
+                  <div class="uk-flex">
+                    <div class="mr-24 uk-visible@s">
+                      <img
                         style="
-                          width: 1px;
-                          height: 64px;
-                          background-color: #d1eed6;
+                          object-fit: cover;
+                          aspect-ratio: 3.57 / 2.58;
+                          border-radius: 8px;
+                          max-width: 357px;
                         "
-                      ></div>
-                      <div class="uk-text-left" style="width: 115px">
-                        <div class="">
-                          <svg
-                            width="20"
-                            height="19"
-                            viewBox="0 0 20 19"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M9.80028 2.21366C7.55838 -0.0712184 3.91553 -0.0712184 1.67364 2.21366C-0.557878 4.48794 -0.557878 8.16757 1.67364 10.4419L8.57242 17.4729C9.35643 18.2719 10.6436 18.2719 11.4276 17.4729L18.3264 10.4419C20.5579 8.16757 20.5579 4.48794 18.3264 2.21366C16.0845 -0.0712184 12.4416 -0.0712184 10.1997 2.21366C10.09 2.32544 9.90996 2.32544 9.80028 2.21366Z"
-                              fill="#58D583"
-                            />
-                          </svg>
-
-                          <div
-                            style="color: #053810; font-size: 13px"
-                            class="mt-4"
-                          >
-                            Hoàn toàn miễn phí
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        style="
-                          width: 1px;
-                          height: 64px;
-                          background-color: #d1eed6;
-                        "
-                      ></div>
-                      <div class="uk-text-left" style="width: 115px">
-                        <div class="">
-                          <svg
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M3 18V20C3 21.1046 3.89543 22 5 22H19C20.1046 22 21 21.1046 21 20V18C21 15.2386 18.7614 13 16 13H8C5.23858 13 3 15.2386 3 18Z"
-                              fill="#58D583"
-                            />
-                            <circle cx="12" cy="6.5" r="4.5" fill="#58D583" />
-                          </svg>
-
-                          <div
-                            style="color: #053810; font-size: 13px"
-                            class="mt-4"
-                          >
-                            Dành cho học sinh từ 4 - 12 tuổi
-                          </div>
-                        </div>
-                      </div>
+                        src="/public/khoa-hoc.webp"
+                        alt="Avatar"
+                      />
                     </div>
-                    <div
-                      style="background-color: transparent; height: 60px"
-                    ></div>
+                    <div class="block-01__desc" style="color: #555555">
+                      Khóa học nhằm mang đến môi trường sinh hoạt tiếng Anh lành
+                      mạnh cho các bạn nhỏ độ tuổi từ 4 đến 6 tuổi, nâng cao khả
+                      năng giao tiếp bằng tiếng Anh bằng việc thực hành nói
+                      chuyện trực tiếp với người nước ngoài bản xứ.
+                    </div>
                   </div>
                 </div>
-                <div
-                  class="uk-position-small uk-position-bottom-center pb-24 uk-text-center"
-                >
-                  <div style="color: #08a00e; font-weight: 600">
-                    Xem các khóa học
+                <div>
+                  <div
+                    class="uk-hidden@m"
+                    style="
+                      height: 1px;
+                      background-color: #e3e3e3;
+                      margin: 24px 0;
+                    "
+                  ></div>
+                  <div class="">
+                    <div class="uk-hidden@m">
+                      <div
+                        class=""
+                        style="
+                          background-color: #f7f7f7;
+                          border-radius: 12px;
+                          padding: 16px;
+                        "
+                      >
+                        <ul
+                          class="uk-nav uk-nav-default uk-nav--about"
+                          id="mn-about"
+                        >
+                          <li class="uk-flex uk-flex-between">
+                            <span>Trạng thái</span>
+                            <span
+                              style="
+                                font-size: 14px;
+                                font-weight: 600;
+                                color: #098406;
+                                background-color: #d3ffcc;
+                                border-radius: 16px;
+                                padding: 4px 12px;
+                                width: fit-content;
+                              "
+                            >
+                              Sắp diễn ra
+                            </span>
+                          </li>
+                          <div
+                            style="
+                              height: 1px;
+                              background-color: #e3e3e3;
+                              margin: 16px 0;
+                            "
+                          ></div>
+                          <li class="uk-flex uk-flex-between">
+                            <span>Độ tuổi phù hợp</span>
+                            <span style="font-size: 14px">
+                              <strong style="font-size: 16px; color: black"
+                                >4 - 6</strong
+                              >
+                              tuổi
+                            </span>
+                          </li>
+                          <div
+                            style="
+                              height: 1px;
+                              background-color: #e3e3e3;
+                              margin: 16px 0;
+                            "
+                          ></div>
+                          <li class="uk-flex uk-flex-between">
+                            <span>Số buổi học</span>
+                            <span style="font-size: 14px">
+                              <strong style="font-size: 16px; color: black"
+                                >4</strong
+                              >
+                              buổi
+                            </span>
+                          </li>
+                          <div
+                            style="
+                              height: 1px;
+                              background-color: #e3e3e3;
+                              margin: 16px 0;
+                            "
+                          ></div>
+                          <li class="uk-flex uk-flex-between">
+                            <span>Thời lượng</span>
+                            <span style="font-size: 14px">
+                              <strong style="font-size: 16px; color: black"
+                                >45p</strong
+                              >
+                              mỗi buổi
+                            </span>
+                          </li>
+                          <div
+                            style="
+                              height: 1px;
+                              background-color: #e3e3e3;
+                              margin: 16px 0;
+                            "
+                          ></div>
+                          <li>
+                            <span>Thời gian học</span>
+                            <div
+                              class="mt-4"
+                              style="font-size: 16px; font-weight: 500"
+                            >
+                              8h30 thứ Hai & thứ Tư hàng tuần Bắt đầu từ ngày
+                              24/01
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="" style="align-items: center">
+                        <!-- <button
+                                                class="mb-12 mt-16 uk-button uk-button-secondary uk-button--btn-1 uk-button--success uk-width-1-1 uk-border-rounded btn-trial-signup"
+                                                uk-toggle="target: #modal-dky-hoc" type="button">
+                                                Đăng ký học
+                                            </button> -->
+                        <div
+                          class="block-01__desc mt-16 mr-16"
+                          style="
+                            color: #555555;
+                            display: flex;
+                            justify-content: center;
+                          "
+                        >
+                          102 học sinh đã đăng ký
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <svg
-                    width="25"
-                    height="24"
-                    viewBox="0 0 25 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <div
+                    style="
+                      height: 1px;
+                      background-color: #e3e3e3;
+                      margin: 24px 0;
+                    "
+                  ></div>
+                  <div>
+                    <fieldset class="uk-fieldset frmdk">
+                      <legend
+                        class=""
+                        style="
+                          font-size: 24px;
+                          font-weight: 700;
+                          color: #097032;
+                        "
+                        id="popup-title"
+                      >
+                        Giáo viên giảng dạy
+                      </legend>
+
+                      <div
+                        class="uk-flex uk-flex-between uk-text-center mt-16 mb-16"
+                      >
+                        <div
+                          class="uk-flex uk-padding-remove uk-align-center uk-margin-remove"
+                        >
+                          <div
+                            class="mr-12 uk-flex"
+                            style="align-items: center"
+                          >
+                            <img
+                              class="uk-border-circle"
+                              width="40"
+                              height="40"
+                              src="/public/khoa-hoc.webp"
+                              alt="Avatar"
+                            />
+                          </div>
+                          <div
+                            class="uk-flex uk-margin-remove"
+                            style="align-items: center"
+                          >
+                            <div
+                              class="mr-12"
+                              style="color: #333333; font-size: 500"
+                            >
+                              Thầy Edward
+                            </div>
+                            <div
+                              class="uk-grid-small uk-child-width-1-3 uk-text-center"
+                              uk-grid
+                            ></div>
+                          </div>
+                        </div>
+                        <div class="uk-flex uk-visible@s">
+                          <div class="uk-text-left">
+                            <div
+                              style="
+                                font-size: 14px;
+                                color: #4b4b4b;
+                                font-weight: 500;
+                              "
+                            >
+                              Chứng chỉ
+                            </div>
+                            <div
+                              style="
+                                font-size: 18px;
+                                font-weight: 600;
+                                color: #0abe27;
+                              "
+                            >
+                              TESOL, TEFL
+                            </div>
+                          </div>
+                          <div
+                            style="
+                              width: 1px;
+                              margin: 0 16px;
+                              background-color: #d5d5d5;
+                            "
+                          ></div>
+                          <div class="uk-text-left">
+                            <div
+                              style="
+                                font-size: 14px;
+                                color: #4b4b4b;
+                                font-weight: 500;
+                              "
+                            >
+                              Kinh nghiệm
+                            </div>
+                            <div
+                              style="
+                                font-size: 18px;
+                                font-weight: 600;
+                                color: #0abe27;
+                              "
+                            >
+                              3 - 5 năm
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="uk-flex uk-flex-between uk-hidden@s mb-16">
+                        <div class="uk-text-left">
+                          <div
+                            style="
+                              font-size: 14px;
+                              color: #4b4b4b;
+                              font-weight: 500;
+                            "
+                          >
+                            Chứng chỉ
+                          </div>
+                          <div
+                            style="
+                              font-size: 18px;
+                              font-weight: 600;
+                              color: #0abe27;
+                            "
+                          >
+                            TESOL, TEFL
+                          </div>
+                        </div>
+                        <div
+                          style="
+                            width: 1px;
+                            margin: 0 16px;
+                            background-color: #d5d5d5;
+                          "
+                        ></div>
+                        <div class="uk-text-left">
+                          <div
+                            style="
+                              font-size: 14px;
+                              color: #4b4b4b;
+                              font-weight: 500;
+                            "
+                          >
+                            Kinh nghiệm
+                          </div>
+                          <div
+                            style="
+                              font-size: 18px;
+                              font-weight: 600;
+                              color: #0abe27;
+                            "
+                          >
+                            3 - 5 năm
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="mb-16 uk-hidden@s uk-position-relative"
+                        uk-toggle="target: #modal-giao-vien"
+                      >
+                        <img
+                          uk-video
+                          style="border-radius: 8px"
+                          src="/public/image1.webp"
+                          alt="Avatar"
+                          class="uk-object-contain uk-width-expand"
+                        />
+                        <svg
+                          id="icon-play"
+                          width="64"
+                          class="uk-position-center"
+                          height="64"
+                          viewBox="0 0 64 64"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle
+                            opacity="0.4"
+                            cx="32"
+                            cy="32"
+                            r="32"
+                            fill="#66DB53"
+                          />
+                          <circle cx="32" cy="32" r="24" fill="#66DB53" />
+                          <path
+                            d="M40.6154 29.5941C42.4615 30.6634 42.4615 33.3366 40.6154 34.4059L28.1538 41.6237C26.3077 42.693 24 41.3563 24 39.2177L24 24.7823C24 22.6437 26.3077 21.307 28.1538 22.3763L40.6154 29.5941Z"
+                            fill="white"
+                          />
+                        </svg>
+                      </div>
+                      <div class="uk-flex">
+                        <div
+                          class="block-01__desc block-01__desc--fz-18 uk-margin uk-width-expand"
+                          style="color: #2b2b2c"
+                          id="popup-quote"
+                        >
+                          “Tôi có thể dạy từ các bạn mới bắt đầu đến các bạn đã
+                          có kiến thức nền và đang muốn cải thiện thêm vốn tiếng
+                          Anh của mình. Khi dạy trẻ em, tôi sử dụng linh hoạt
+                          nhiều phương pháp khác nhau. Tôi tin rằng học tiếng
+                          Anh với các bạn nhỏ nên là một quá trình thú vị và hấp
+                          dẫn. Vì vậy, tôi luôn tâm niệm rằng học sinh của mình
+                          phải có nhiều niềm vui trong lớp.”
+                        </div>
+                        <div
+                          class="ml-24 uk-visible@s uk-position-relative"
+                          style="width: 300px; height: min-content"
+                          uk-toggle="target: #modal-giao-vien"
+                        >
+                          <img
+                            style="border-radius: 8px; cursor: pointer"
+                            src="/public/image1.webp"
+                            alt="Avatar"
+                            class="uk-object-contain uk-width-expand"
+                          />
+                          <svg
+                            width="48"
+                            id="icon-play"
+                            class="uk-position-center uk-light"
+                            style="cursor: pointer"
+                            height="48"
+                            viewBox="0 0 64 64"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <circle
+                              opacity="0.4"
+                              cx="32"
+                              cy="32"
+                              r="32"
+                              fill="#66DB53"
+                            />
+                            <circle cx="32" cy="32" r="24" fill="#66DB53" />
+                            <path
+                              d="M40.6154 29.5941C42.4615 30.6634 42.4615 33.3366 40.6154 34.4059L28.1538 41.6237C26.3077 42.693 24 41.3563 24 39.2177L24 24.7823C24 22.6437 26.3077 21.307 28.1538 22.3763L40.6154 29.5941Z"
+                              fill="white"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                  <div
+                    style="
+                      height: 1px;
+                      background-color: #e3e3e3;
+                      margin: 24px 0;
+                    "
+                  ></div>
+                  <div>
+                    <legend
+                      class="mb-16"
+                      style="font-size: 24px; font-weight: 700; color: #097032"
+                    >
+                      Mục tiêu khóa học
+                    </legend>
+                    <ul
+                      class="uk-list uk-list-disc uk-margin-remove"
+                      style="color: #2b2b2c"
+                    >
+                      <li class="uk-margin-remove">
+                        Hình thành phản xạ đọc, nghe, hiểu và nói tiếng Anh một
+                        cách tự nhiên
+                      </li>
+                      <li class="uk-margin-remove">
+                        Làm giàu vốn từ vựng và hoàn thiện khả năng ngữ pháp
+                        nhanh chóng
+                      </li>
+                      <li class="uk-margin-remove">
+                        Được nuôi dưỡng thói quen nghe và đọc sách tiếng Anh một
+                        cách hiệu quả
+                      </li>
+                      <li class="uk-margin-remove">
+                        Kích thích trí tưởng tượng, khả năng sáng tạo
+                      </li>
+                      <li class="uk-margin-remove">
+                        Nhận vô số quà tặng và chứng nhận hoàn thành khi tham
+                        gia tích cực vào vòng thử thách sau mỗi buổi học
+                      </li>
+                    </ul>
+                  </div>
+                  <div
+                    style="
+                      height: 1px;
+                      background-color: #e3e3e3;
+                      margin: 24px 0;
+                    "
+                  ></div>
+                  <div>
+                    <legend
+                      class="mb-16"
+                      style="font-size: 24px; font-weight: 700; color: #097032"
+                    >
+                      Nội dung khóa học
+                    </legend>
+                    <ul
+                      class="uk-list uk-list-disc uk-margin-remove"
+                      style="color: #2b2b2c"
+                    >
+                      <li class="uk-margin-remove">
+                        Qui ad blanditiis qui suscipit hic iure possimus. Quia
+                        qui illum sed repudiandae. Sit officia magnam
+                        consequatur. Ut et natus facere porro laudantium aut
+                        ratione aperiam.
+                      </li>
+                      <li class="uk-margin-remove">
+                        Qui ad blanditiis qui suscipit hic iure possimus. Quia
+                        qui illum sed repudiandae. Sit officia magnam
+                        consequatur. Ut et natus facere porro laudantium aut
+                        ratione aperiam.
+                      </li>
+                      <li class="uk-margin-remove">
+                        Qui ad blanditiis qui suscipit hic iure possimus. Quia
+                        qui illum sed repudiandae. Sit officia magnam
+                        consequatur. Ut et natus facere porro laudantium aut
+                        ratione aperiam.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="uk-width-1-3@m uk-visible@m">
+                <div class="" uk-sticky="end: !.uk-height-large; offset: 100">
+                  <div
+                    class=""
+                    style="
+                      background-color: #f7f7f7;
+                      border-radius: 12px;
+                      padding: 16px;
+                    "
                   >
-                    <path
-                      d="M19.9999 13.5L12.4999 21L4.99992 13.5"
-                      stroke="#08A00E"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M12.4999 2.99997L12.4999 21"
-                      stroke="#08A00E"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                    />
-                  </svg>
+                    <ul
+                      class="uk-nav uk-nav-default uk-nav--about"
+                      id="mn-about"
+                    >
+                      <li class="uk-flex uk-flex-between">
+                        <span>Trạng thái</span>
+                        <span
+                          style="
+                            font-size: 14px;
+                            font-weight: 600;
+                            color: #098406;
+                            background-color: #d3ffcc;
+                            border-radius: 16px;
+                            padding: 4px 12px;
+                            width: fit-content;
+                          "
+                        >
+                          Sắp diễn ra
+                        </span>
+                      </li>
+                      <div
+                        style="
+                          height: 1px;
+                          background-color: #e3e3e3;
+                          margin: 16px 0;
+                        "
+                      ></div>
+                      <li class="uk-flex uk-flex-between">
+                        <span>Độ tuổi phù hợp</span>
+                        <span style="font-size: 14px">
+                          <strong style="font-size: 16px; color: black"
+                            >4 - 6</strong
+                          >
+                          tuổi
+                        </span>
+                      </li>
+                      <div
+                        style="
+                          height: 1px;
+                          background-color: #e3e3e3;
+                          margin: 16px 0;
+                        "
+                      ></div>
+                      <li class="uk-flex uk-flex-between">
+                        <span>Số buổi học</span>
+                        <span style="font-size: 14px">
+                          <strong style="font-size: 16px; color: black"
+                            >4</strong
+                          >
+                          buổi
+                        </span>
+                      </li>
+                      <div
+                        style="
+                          height: 1px;
+                          background-color: #e3e3e3;
+                          margin: 16px 0;
+                        "
+                      ></div>
+                      <li class="uk-flex uk-flex-between">
+                        <span>Thời lượng</span>
+                        <span style="font-size: 14px">
+                          <strong style="font-size: 16px; color: black"
+                            >45p</strong
+                          >
+                          mỗi buổi
+                        </span>
+                      </li>
+                      <div
+                        style="
+                          height: 1px;
+                          background-color: #e3e3e3;
+                          margin: 16px 0;
+                        "
+                      ></div>
+                      <li>
+                        <span>Thời gian học</span>
+                        <div
+                          class="mt-4"
+                          style="font-size: 16px; font-weight: 500"
+                        >
+                          8h30 thứ Hai & thứ Tư hàng tuần Bắt đầu từ ngày 24/01
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="" style="align-items: center">
+                    <button
+                      class="mb-12 mt-16 uk-button uk-button-secondary uk-button--btn-1 uk-button--success uk-width-1-1 uk-border-rounded btn-trial-signup"
+                      uk-toggle="target: #modal-dky-hoc"
+                      type="button"
+                    >
+                      Đăng ký học
+                    </button>
+                    <div
+                      class="block-01__desc mr-16"
+                      style="
+                        color: #555555;
+                        display: flex;
+                        justify-content: center;
+                      "
+                    >
+                      102 học sinh đã đăng ký
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- for mobile -->
-          <div style="background-color: #f2fff3" class="mb-16 uk-hidden@l">
-            <div class="pt-30 uk-container mb-20">
-              <div class="" style="width: 100%; height: 100%">
-                <div>
-                  <div style="max-width: 563px; width: 100%">
-                    <div
-                      style="font-size: 32px; font-weight: 700; color: #063f0c"
-                    >
-                      Khóa học miễn phí <br />
-                      với giáo viên nước ngoài
-                    </div>
-                    <div
-                      class="mt-12 mb-24"
-                      style="
-                        background-image: linear-gradient(
-                          to right,
-                          rgba(249, 111, 33, 0),
-                          #f96f21
-                        );
-                        height: 8px;
-                        width: 100%;
-                        border-radius: 999px;
-                      "
-                    ></div>
-                    <div style="font-weight: 500; color: #00820d">
-                      Public courses là các khoá học tiếng Anh ngắn hạn miễn phí
-                      với giáo viên nước ngoài được tổ chức bởi Chip Chip theo
-                      mô hình lớp học cỡ vừa từ 8-100 học sinh.
-                    </div>
-                    <div
-                      class="uk-flex uk-flex-between uk-text-center pt-10 pb-20"
-                      d
-                    >
-                      <div>
-                        <div class="uk-text-left" style="width: 115px">
-                          <svg
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M5 5C3.34315 5 2 6.34315 2 8V16C2 17.6569 3.34315 19 5 19H14C15.6569 19 17 17.6569 17 16V15.4286L18.8375 16.7411C20.1613 17.6866 22 16.7404 22 15.1136V8.88638C22 7.25963 20.1613 6.31339 18.8375 7.25891L17 8.57143V8C17 6.34315 15.6569 5 14 5H5Z"
-                              fill="#58D583"
-                            />
-                          </svg>
-
-                          <div
-                            style="color: #053810; font-size: 13px"
-                            class="mt-4"
-                          >
-                            Lớp học Online
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        style="
-                          width: 1px;
-                          height: 64px;
-                          background-color: #d1eed6;
-                        "
-                      ></div>
-                      <div class="uk-text-left" style="width: 115px">
-                        <div class="">
-                          <svg
-                            width="20"
-                            height="19"
-                            viewBox="0 0 20 19"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M9.80028 2.21366C7.55838 -0.0712184 3.91553 -0.0712184 1.67364 2.21366C-0.557878 4.48794 -0.557878 8.16757 1.67364 10.4419L8.57242 17.4729C9.35643 18.2719 10.6436 18.2719 11.4276 17.4729L18.3264 10.4419C20.5579 8.16757 20.5579 4.48794 18.3264 2.21366C16.0845 -0.0712184 12.4416 -0.0712184 10.1997 2.21366C10.09 2.32544 9.90996 2.32544 9.80028 2.21366Z"
-                              fill="#58D583"
-                            />
-                          </svg>
-
-                          <div
-                            style="color: #053810; font-size: 13px"
-                            class="mt-4"
-                          >
-                            Hoàn toàn miễn phí
-                          </div>
-                        </div>
-                      </div>
-                      <div
-                        style="
-                          width: 1px;
-                          height: 64px;
-                          background-color: #d1eed6;
-                        "
-                      ></div>
-                      <div class="uk-text-left" style="width: 115px">
-                        <div class="">
-                          <svg
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M3 18V20C3 21.1046 3.89543 22 5 22H19C20.1046 22 21 21.1046 21 20V18C21 15.2386 18.7614 13 16 13H8C5.23858 13 3 15.2386 3 18Z"
-                              fill="#58D583"
-                            />
-                            <circle cx="12" cy="6.5" r="4.5" fill="#58D583" />
-                          </svg>
-
-                          <div
-                            style="color: #053810; font-size: 13px"
-                            class="mt-4"
-                          >
-                            Dành cho học sinh từ 4 - 12 tuổi
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <img
-              style="width: 100%"
-              src="/public/main-baner-mobile.svg"
-              alt="banner"
-            />
-            <div class="pb-24 uk-text-center">
-              <div style="color: #08a00e; font-weight: 600">
-                Xem các khóa học
-              </div>
+        <div id="modal-giao-vien" class="uk-flex-top" uk-modal>
+          <div
+            class="uk-modal-dialog uk-padding-remove uk-modal-body uk-margin-auto-vertical"
+            style="max-width: 688px; border-radius: 16px"
+          >
+            <button
+              class="uk-modal-close-default"
+              type="button"
+              style="
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+              "
+            >
               <svg
-                width="25"
-                height="24"
-                viewBox="0 0 25 24"
+                width="28"
+                height="28"
+                viewBox="0 0 28 28"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M19.9999 13.5L12.4999 21L4.99992 13.5"
-                  stroke="#08A00E"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M12.4999 2.99997L12.4999 21"
-                  stroke="#08A00E"
-                  stroke-width="2"
-                  stroke-linecap="round"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M13.9998 27.3333C21.3636 27.3333 27.3332 21.3638 27.3332 14C27.3332 6.63616 21.3636 0.666626 13.9998 0.666626C6.63604 0.666626 0.666504 6.63616 0.666504 14C0.666504 21.3638 6.63604 27.3333 13.9998 27.3333ZM9.05703 18.9428C8.53633 18.4221 8.53633 17.5778 9.05703 17.0571L12.1143 13.9999L9.05715 10.9428C8.53645 10.4221 8.53645 9.57789 9.05715 9.05719C9.57785 8.53649 10.4221 8.53649 10.9428 9.05719L13.9999 12.1143L17.057 9.05715C17.5777 8.53645 18.4219 8.53645 18.9426 9.05715C19.4633 9.57785 19.4633 10.4221 18.9426 10.9428L15.8855 13.9999L18.9428 17.0572C19.4635 17.5779 19.4635 18.4221 18.9428 18.9428C18.4221 19.4635 17.5778 19.4635 17.0571 18.9428L13.9999 15.8855L10.9426 18.9428C10.4219 19.4635 9.57773 19.4635 9.05703 18.9428Z"
+                  fill="#E1E1E1"
                 />
               </svg>
-            </div>
-          </div>
-        </div>
-        <!-- End main banner -->
+            </button>
 
-        <!-- Lớp sắp diễn ra -->
-        <div class="uk-container mb-80">
-          <div class="upcoming-classes-section">
-            <h2 class="upcoming-classes-title mb-24">Lớp sắp diễn ra</h2>
-
-            <!-- Desktop view -->
-            <div class="completed-classes-grid">
-              <!-- Card 1 -->
-              <div class="completed-class-col">
-                <a href="/course.html" class="upcoming-class-card-link">
-                  <div class="upcoming-class-card">
-                    <div class="upcoming-class-card__image">
-                    <img
-                      src="/public/khoa-hoc.webp"
-                      alt="Journey to Story Land"
-                    />
-                  </div>
-                  <div class="upcoming-class-card__content">
-                    <h3 class="upcoming-class-card__title">
-                      Free Lesson Week 1 October
-                    </h3>
-                    <div class="upcoming-class-card__time">
-                      <svg
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                          fill="#2B2B2C"
-                        />
-                        <path
-                          d="M12 6V12L16 14"
-                          stroke="white"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                      <span>20:30 - 03/10/2025</span>
-                    </div>
-                    <div class="upcoming-class-card__status">
-                      <span
-                        class="upcoming-class-card__status-text upcoming-class-card__status-text--available"
-                        >Đã đăng ký 5/10 học sinh</span
-                      >
-                      <div class="upcoming-class-card__progress">
-                        <div
-                          class="upcoming-class-card__progress-bar"
-                          style="width: 50%"
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                </a>
-              </div>
-
-              <!-- Card 2 -->
-              <div class="completed-class-col">
-                <a href="/course.html" class="upcoming-class-card-link">
-                  <div class="upcoming-class-card">
-                    <div class="upcoming-class-card__image">
-                    <img
-                      src="/public/khoa-hoc.webp"
-                      alt="Journey to Story Land"
-                    />
-                  </div>
-                  <div class="upcoming-class-card__content">
-                    <h3 class="upcoming-class-card__title">
-                      Free Lesson Week 2 October
-                    </h3>
-                    <div class="upcoming-class-card__time">
-                      <svg
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                          fill="#2B2B2C"
-                        />
-                        <path
-                          d="M12 6V12L16 14"
-                          stroke="white"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                      <span>20:30 - 11/10/2025</span>
-                    </div>
-                    <div class="upcoming-class-card__status">
-                      <span
-                        class="upcoming-class-card__status-text upcoming-class-card__status-text--available"
-                        >Đã đăng ký 5/10 học sinh</span
-                      >
-                      <div class="upcoming-class-card__progress">
-                        <div
-                          class="upcoming-class-card__progress-bar"
-                          style="width: 50%"
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                </a>
-              </div>
-
-              <!-- Card 3 -->
-              <div class="completed-class-col">
-                <a href="/course.html" class="upcoming-class-card-link">
-                  <div class="upcoming-class-card">
-                    <div class="upcoming-class-card__image">
-                    <img
-                      src="/public/khoa-hoc.webp"
-                      alt="Journey to Story Land"
-                    />
-                  </div>
-                  <div class="upcoming-class-card__content">
-                    <h3 class="upcoming-class-card__title">
-                      Free Lesson Week 3 October
-                    </h3>
-                    <div class="upcoming-class-card__time">
-                      <svg
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                          fill="#2B2B2C"
-                        />
-                        <path
-                          d="M12 6V12L16 14"
-                          stroke="white"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                      <span>20:30 - 19/10/2025</span>
-                    </div>
-                    <div class="upcoming-class-card__status">
-                      <span
-                        class="upcoming-class-card__status-text upcoming-class-card__status-text--full"
-                        >Đã đủ học sinh đăng ký</span
-                      >
-                      <div
-                        class="upcoming-class-card__progress upcoming-class-card__progress--full"
-                      >
-                        <div
-                          class="upcoming-class-card__progress-bar"
-                          style="width: 100%"
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                </a>
-              </div>
-
-              <!-- Card 4 -->
-              <div class="completed-class-col">
-                <a href="/course.html" class="upcoming-class-card-link">
-                  <div class="upcoming-class-card">
-                    <div class="upcoming-class-card__image">
-                    <img
-                      src="/public/khoa-hoc.webp"
-                      alt="Journey to Story Land"
-                    />
-                  </div>
-                  <div class="upcoming-class-card__content">
-                    <h3 class="upcoming-class-card__title">
-                      Free Lesson Week 4 October
-                    </h3>
-                    <div class="upcoming-class-card__time">
-                      <svg
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                          fill="#2B2B2C"
-                        />
-                        <path
-                          d="M12 6V12L16 14"
-                          stroke="white"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                      <span>20:30 - 26/10/2025</span>
-                    </div>
-                    <div class="upcoming-class-card__status">
-                      <span
-                        class="upcoming-class-card__status-text upcoming-class-card__status-text--full"
-                        >Đã đủ học sinh đăng ký</span
-                      >
-                      <div
-                        class="upcoming-class-card__progress upcoming-class-card__progress--full"
-                      >
-                        <div
-                          class="upcoming-class-card__progress-bar"
-                          style="width: 100%"
-                        ></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                </a>
-              </div>
-            </div>
-
-            <!-- Mobile view -->
-            <div class="upcoming-classes-mobile uk-hidden@m">
-              <div
-                class="uk-position-relative uk-visible-toggle"
-                tabindex="-1"
-                uk-slider="center: false; finite: true"
+            <div class="mb-16">
+              <iframe
+                uk-video
+                style="border-radius: 8px; aspect-ratio: 16/9"
+                class="uk-object-contain uk-width-expand"
+                width="420"
+                allow="autoplay"
+                src="https://www.youtube.com/embed/_lj327AsvCs?autoplay=1"
               >
-                <ul
-                  class="uk-slider-items uk-grid-small"
-                  style="margin-left: -15px"
-                  uk-grid
-                >
-                  <!-- Card 1 -->
-                  <li>
-                    <a href="/course.html" class="upcoming-class-card-link">
-                      <div class="upcoming-class-card">
-                        <div class="upcoming-class-card__image">
-                        <img
-                          src="/public/khoa-hoc.webp"
-                          alt="Journey to Story Land"
-                        />
-                      </div>
-                      <div class="upcoming-class-card__content">
-                        <h3 class="upcoming-class-card__title">
-                          Free Lesson Week 1 October
-                        </h3>
-                        <div class="upcoming-class-card__time">
-                          <svg
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                              fill="#2B2B2C"
-                            />
-                            <path
-                              d="M12 6V12L16 14"
-                              stroke="white"
-                              stroke-width="2"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                          </svg>
-                          <span>20:30 - 03/10/2025</span>
-                        </div>
-                        <div class="upcoming-class-card__status">
-                          <span
-                            class="upcoming-class-card__status-text upcoming-class-card__status-text--available"
-                            >Đã đăng ký 5/10 học sinh</span
-                          >
-                          <div class="upcoming-class-card__progress">
-                            <div
-                              class="upcoming-class-card__progress-bar"
-                              style="width: 50%"
-                            ></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    </a>
-                  </li>
-
-                  <!-- Card 2 -->
-                  <li>
-                    <a href="/course.html" class="upcoming-class-card-link">
-                      <div class="upcoming-class-card">
-                        <div class="upcoming-class-card__image">
-                        <img
-                          src="/public/khoa-hoc.webp"
-                          alt="Journey to Story Land"
-                        />
-                      </div>
-                      <div class="upcoming-class-card__content">
-                        <h3 class="upcoming-class-card__title">
-                          Free Lesson Week 2 October
-                        </h3>
-                        <div class="upcoming-class-card__time">
-                          <svg
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                              fill="#2B2B2C"
-                            />
-                            <path
-                              d="M12 6V12L16 14"
-                              stroke="white"
-                              stroke-width="2"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                          </svg>
-                          <span>20:30 - 11/10/2025</span>
-                        </div>
-                        <div class="upcoming-class-card__status">
-                          <span
-                            class="upcoming-class-card__status-text upcoming-class-card__status-text--available"
-                            >Đã đăng ký 5/10 học sinh</span
-                          >
-                          <div class="upcoming-class-card__progress">
-                            <div
-                              class="upcoming-class-card__progress-bar"
-                              style="width: 50%"
-                            ></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    </a>
-                  </li>
-
-                  <!-- Card 3 -->
-                  <li>
-                    <a href="/course.html" class="upcoming-class-card-link">
-                      <div class="upcoming-class-card">
-                        <div class="upcoming-class-card__image">
-                        <img
-                          src="/public/khoa-hoc.webp"
-                          alt="Journey to Story Land"
-                        />
-                      </div>
-                      <div class="upcoming-class-card__content">
-                        <h3 class="upcoming-class-card__title">
-                          Free Lesson Week 3 October
-                        </h3>
-                        <div class="upcoming-class-card__time">
-                          <svg
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                              fill="#2B2B2C"
-                            />
-                            <path
-                              d="M12 6V12L16 14"
-                              stroke="white"
-                              stroke-width="2"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                          </svg>
-                          <span>20:30 - 19/10/2025</span>
-                        </div>
-                        <div class="upcoming-class-card__status">
-                          <span
-                            class="upcoming-class-card__status-text upcoming-class-card__status-text--full"
-                            >Đã đủ học sinh đăng ký</span
-                          >
-                          <div
-                            class="upcoming-class-card__progress upcoming-class-card__progress--full"
-                          >
-                            <div
-                              class="upcoming-class-card__progress-bar"
-                              style="width: 100%"
-                            ></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    </a>
-                  </li>
-
-                  <!-- Card 4 -->
-                  <li>
-                    <a href="/course.html" class="upcoming-class-card-link">
-                      <div class="upcoming-class-card">
-                        <div class="upcoming-class-card__image">
-                        <img
-                          src="/public/khoa-hoc.webp"
-                          alt="Journey to Story Land"
-                        />
-                      </div>
-                      <div class="upcoming-class-card__content">
-                        <h3 class="upcoming-class-card__title">
-                          Free Lesson Week 4 October
-                        </h3>
-                        <div class="upcoming-class-card__time">
-                          <svg
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                              fill="#2B2B2C"
-                            />
-                            <path
-                              d="M12 6V12L16 14"
-                              stroke="white"
-                              stroke-width="2"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                          </svg>
-                          <span>20:30 - 26/10/2025</span>
-                        </div>
-                        <div class="upcoming-class-card__status">
-                          <span
-                            class="upcoming-class-card__status-text upcoming-class-card__status-text--full"
-                            >Đã đủ học sinh đăng ký</span
-                          >
-                          <div
-                            class="upcoming-class-card__progress upcoming-class-card__progress--full"
-                          >
-                            <div
-                              class="upcoming-class-card__progress-bar"
-                              style="width: 100%"
-                            ></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    </a>
-                  </li>
-                </ul>
-
-                <a
-                  class="uk-position-center-left uk-position-small uk-hidden-hover"
-                  href="#"
-                  uk-slidenav-previous
-                  uk-slider-item="previous"
-                ></a>
-                <a
-                  class="uk-position-center-right uk-position-small uk-hidden-hover"
-                  href="#"
-                  uk-slidenav-next
-                  uk-slider-item="next"
-                ></a>
-              </div>
-
-              <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
+              </iframe>
             </div>
           </div>
         </div>
-        <!-- End Lớp sắp diễn ra -->
-
-        <!-- Lớp học đã hoàn thành -->
-        <div class="uk-container" style="margin-bottom: 80px">
-          <div class="completed-classes-section">
-            <h2 class="completed-classes-title mb-24">Lớp học đã hoàn thành</h2>
-
-            <!-- Desktop view -->
-            <div class="completed-classes-grid">
-              <!-- Card 1 -->
-              <div class="completed-class-col">
-                <a href="/course.html" class="completed-class-card-link">
-                  <div class="completed-class-card">
-                    <div class="completed-class-card__image">
-                    <img
-                      src="/public/khoa-hoc.webp"
-                      alt="Journey to Story Land"
-                    />
-                    <div class="completed-class-card__overlay"></div>
-                  </div>
-                  <div class="completed-class-card__content">
-                    <div class="completed-class-card__badge">Đã kết thúc</div>
-                    <h3 class="completed-class-card__title">
-                      Free Lesson Week 1 September
-                    </h3>
-                    <div class="completed-class-card__time">
-                      <svg
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                          fill="#2B2B2C"
-                        />
-                        <path
-                          d="M12 6V12L16 14"
-                          stroke="white"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                      <span>20:30 - 01/09/2025</span>
-                    </div>
-                  </div>
-                </div>
-                </a>
-              </div>
-
-              <!-- Card 2 -->
-              <div class="completed-class-col">
-                <a href="/course.html" class="completed-class-card-link">
-                  <div class="completed-class-card">
-                    <div class="completed-class-card__image">
-                    <img
-                      src="/public/khoa-hoc.webp"
-                      alt="Journey to Story Land"
-                    />
-                    <div class="completed-class-card__overlay"></div>
-                  </div>
-                  <div class="completed-class-card__content">
-                    <div class="completed-class-card__badge">Đã kết thúc</div>
-                    <h3 class="completed-class-card__title">
-                      Free Lesson Week 2 September
-                    </h3>
-                    <div class="completed-class-card__time">
-                      <svg
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                          fill="#2B2B2C"
-                        />
-                        <path
-                          d="M12 6V12L16 14"
-                          stroke="white"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                      <span>20:30 - 08/09/2025</span>
-                    </div>
-                  </div>
-                </div>
-                </a>
-              </div>
-
-              <!-- Card 3 -->
-              <div class="completed-class-col">
-                <a href="/course.html" class="completed-class-card-link">
-                  <div class="completed-class-card">
-                    <div class="completed-class-card__image">
-                    <img
-                      src="/public/khoa-hoc.webp"
-                      alt="Journey to Story Land"
-                    />
-                    <div class="completed-class-card__overlay"></div>
-                  </div>
-                  <div class="completed-class-card__content">
-                    <div class="completed-class-card__badge">Đã kết thúc</div>
-                    <h3 class="completed-class-card__title">
-                      Free Lesson Week 3 September
-                    </h3>
-                    <div class="completed-class-card__time">
-                      <svg
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                          fill="#2B2B2C"
-                        />
-                        <path
-                          d="M12 6V12L16 14"
-                          stroke="white"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                      <span>20:30 - 17/09/2025</span>
-                    </div>
-                  </div>
-                </div>
-                </a>
-              </div>
-
-              <!-- Card 4 -->
-              <div class="completed-class-col">
-                <a href="/course.html" class="completed-class-card-link">
-                  <div class="completed-class-card">
-                    <div class="completed-class-card__image">
-                    <img
-                      src="/public/khoa-hoc.webp"
-                      alt="Journey to Story Land"
-                    />
-                    <div class="completed-class-card__overlay"></div>
-                  </div>
-                  <div class="completed-class-card__content">
-                    <div class="completed-class-card__badge">Đã kết thúc</div>
-                    <h3 class="completed-class-card__title">
-                      Free Lesson Week 4 September
-                    </h3>
-                    <div class="completed-class-card__time">
-                      <svg
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                          fill="#2B2B2C"
-                        />
-                        <path
-                          d="M12 6V12L16 14"
-                          stroke="white"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                        />
-                      </svg>
-                      <span>20:30 - 25/09/2025</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Mobile view -->
-            <div class="completed-classes-mobile uk-hidden@m">
-              <div
-                class="uk-position-relative uk-visible-toggle"
-                tabindex="-1"
-                uk-slider="center: false; finite: true"
-              >
-                <ul
-                  class="uk-slider-items uk-grid-small"
-                  style="margin-left: -15px"
-                  uk-grid
-                >
-                  <!-- Card 1 -->
-                  <li>
-                    <a href="/course.html" class="completed-class-card-link">
-                      <div class="completed-class-card">
-                        <div class="completed-class-card__image">
-                        <img
-                          src="/public/khoa-hoc.webp"
-                          alt="Journey to Story Land"
-                        />
-                        <div class="completed-class-card__overlay"></div>
-                      </div>
-                      <div class="completed-class-card__content">
-                        <div class="completed-class-card__badge">
-                          Đã kết thúc
-                        </div>
-                        <h3 class="completed-class-card__title">
-                          Free Lesson Week 1 September
-                        </h3>
-                        <div class="completed-class-card__time">
-                          <svg
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                              fill="#2B2B2C"
-                            />
-                            <path
-                              d="M12 6V12L16 14"
-                              stroke="white"
-                              stroke-width="2"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                          </svg>
-                          <span>20:30 - 01/09/2025</span>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-
-                  <!-- Card 2 -->
-                  <li>
-                    <a href="/course.html" class="completed-class-card-link">
-                      <div class="completed-class-card">
-                        <div class="completed-class-card__image">
-                        <img
-                          src="/public/khoa-hoc.webp"
-                          alt="Journey to Story Land"
-                        />
-                        <div class="completed-class-card__overlay"></div>
-                      </div>
-                      <div class="completed-class-card__content">
-                        <div class="completed-class-card__badge">
-                          Đã kết thúc
-                        </div>
-                        <h3 class="completed-class-card__title">
-                          Free Lesson Week 2 September
-                        </h3>
-                        <div class="completed-class-card__time">
-                          <svg
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                              fill="#2B2B2C"
-                            />
-                            <path
-                              d="M12 6V12L16 14"
-                              stroke="white"
-                              stroke-width="2"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                          </svg>
-                          <span>20:30 - 08/09/2025</span>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-
-                  <!-- Card 3 -->
-                  <li>
-                    <a href="/course.html" class="completed-class-card-link">
-                      <div class="completed-class-card">
-                        <div class="completed-class-card__image">
-                        <img
-                          src="/public/khoa-hoc.webp"
-                          alt="Journey to Story Land"
-                        />
-                        <div class="completed-class-card__overlay"></div>
-                      </div>
-                      <div class="completed-class-card__content">
-                        <div class="completed-class-card__badge">
-                          Đã kết thúc
-                        </div>
-                        <h3 class="completed-class-card__title">
-                          Free Lesson Week 3 September
-                        </h3>
-                        <div class="completed-class-card__time">
-                          <svg
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                              fill="#2B2B2C"
-                            />
-                            <path
-                              d="M12 6V12L16 14"
-                              stroke="white"
-                              stroke-width="2"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                          </svg>
-                          <span>20:30 - 17/09/2025</span>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-
-                  <!-- Card 4 -->
-                  <li>
-                    <a href="/course.html" class="completed-class-card-link">
-                      <div class="completed-class-card">
-                        <div class="completed-class-card__image">
-                        <img
-                          src="/public/khoa-hoc.webp"
-                          alt="Journey to Story Land"
-                        />
-                        <div class="completed-class-card__overlay"></div>
-                      </div>
-                      <div class="completed-class-card__content">
-                        <div class="completed-class-card__badge">
-                          Đã kết thúc
-                        </div>
-                        <h3 class="completed-class-card__title">
-                          Free Lesson Week 4 September
-                        </h3>
-                        <div class="completed-class-card__time">
-                          <svg
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-                              fill="#2B2B2C"
-                            />
-                            <path
-                              d="M12 6V12L16 14"
-                              stroke="white"
-                              stroke-width="2"
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
-                            />
-                          </svg>
-                          <span>20:30 - 25/09/2025</span>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-
-                <a
-                  class="uk-position-center-left uk-position-small uk-hidden-hover"
-                  href="#"
-                  uk-slidenav-previous
-                  uk-slider-item="previous"
-                ></a>
-                <a
-                  class="uk-position-center-right uk-position-small uk-hidden-hover"
-                  href="#"
-                  uk-slidenav-next
-                  uk-slider-item="next"
-                ></a>
-              </div>
-
-              <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
-            </div>
-          </div>
-        </div>
-        <!-- End Lớp học đã hoàn thành -->
 
         <!-- Modal đăng ký học -->
         <div id="modal-dky-hoc" class="uk-flex-top form-dky" uk-modal>
@@ -1699,6 +1176,7 @@
                           <option value="2019">2019</option>
                           <option value="2020">2020</option>
                         </select>
+
                         <button
                           class="uk-button uk-button-default form-dky-hoc__input"
                           type="button"
@@ -1731,220 +1209,6 @@
                     </div>
 
                     <!--End Modal đăng ký học -->
-
-                    <!-- Modal đăng giáo viên -->
-                    <div id="modal-giao-vien" class="uk-flex-top" uk-modal>
-                      <div
-                        class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical"
-                        style="
-                          max-width: 688px;
-                          border-radius: 16px;
-                          padding: 24px;
-                        "
-                      >
-                        <button
-                          class="uk-modal-close-default"
-                          type="button"
-                          style="
-                            background-color: transparent;
-                            border: none;
-                            cursor: pointer;
-                          "
-                        >
-                          <svg
-                            width="28"
-                            height="28"
-                            viewBox="0 0 28 28"
-                            fill="none"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              clip-rule="evenodd"
-                              d="M13.9998 27.3333C21.3636 27.3333 27.3332 21.3638 27.3332 14C27.3332 6.63616 21.3636 0.666626 13.9998 0.666626C6.63604 0.666626 0.666504 6.63616 0.666504 14C0.666504 21.3638 6.63604 27.3333 13.9998 27.3333ZM9.05703 18.9428C8.53633 18.4221 8.53633 17.5778 9.05703 17.0571L12.1143 13.9999L9.05715 10.9428C8.53645 10.4221 8.53645 9.57789 9.05715 9.05719C9.57785 8.53649 10.4221 8.53649 10.9428 9.05719L13.9999 12.1143L17.057 9.05715C17.5777 8.53645 18.4219 8.53645 18.9426 9.05715C19.4633 9.57785 19.4633 10.4221 18.9426 10.9428L15.8855 13.9999L18.9428 17.0572C19.4635 17.5779 19.4635 18.4221 18.9428 18.9428C18.4221 19.4635 17.5778 19.4635 17.0571 18.9428L13.9999 15.8855L10.9426 18.9428C10.4219 19.4635 9.57773 19.4635 9.05703 18.9428Z"
-                              fill="#E1E1E1"
-                            />
-                          </svg>
-                        </button>
-
-                        <div>
-                          <fieldset class="uk-fieldset frmdk">
-                            <legend
-                              class="uk-legend block-01__title block-01__title--fz-32"
-                              id="popup-title"
-                              style="font-size: 20px; font-weight: 700"
-                            >
-                              Giáo viên
-                            </legend>
-
-                            <div
-                              class="uk-flex uk-flex-between uk-text-center mt-16 mb-16"
-                            >
-                              <div
-                                class="uk-flex uk-padding-remove uk-align-center uk-margin-remove"
-                              >
-                                <div
-                                  class="mr-12 uk-flex"
-                                  style="align-items: center"
-                                >
-                                  <img
-                                    class="uk-border-circle"
-                                    width="40"
-                                    height="40"
-                                    src="/public/khoa-hoc.webp"
-                                    alt="Avatar"
-                                  />
-                                </div>
-                                <div
-                                  class="uk-flex uk-margin-remove"
-                                  style="align-items: center"
-                                >
-                                  <div
-                                    class="mr-12"
-                                    style="color: #333333; font-size: 500"
-                                  >
-                                    Thầy Edward
-                                  </div>
-                                  <div
-                                    class="uk-grid-small uk-child-width-1-3 uk-text-center"
-                                    uk-grid
-                                  ></div>
-                                </div>
-                              </div>
-                              <div class="uk-flex uk-visible@s">
-                                <div class="uk-text-left">
-                                  <div
-                                    style="
-                                      font-size: 14px;
-                                      color: #4b4b4b;
-                                      font-weight: 500;
-                                    "
-                                  >
-                                    Chứng chỉ
-                                  </div>
-                                  <div
-                                    style="
-                                      font-size: 18px;
-                                      font-weight: 600;
-                                      color: #0abe27;
-                                    "
-                                  >
-                                    TESOL, TEFL
-                                  </div>
-                                </div>
-                                <div
-                                  style="
-                                    width: 1px;
-                                    margin: 0 16px;
-                                    background-color: #d5d5d5;
-                                  "
-                                ></div>
-                                <div class="uk-text-left">
-                                  <div
-                                    style="
-                                      font-size: 14px;
-                                      color: #4b4b4b;
-                                      font-weight: 500;
-                                    "
-                                  >
-                                    Kinh nghiệm
-                                  </div>
-                                  <div
-                                    style="
-                                      font-size: 18px;
-                                      font-weight: 600;
-                                      color: #0abe27;
-                                    "
-                                  >
-                                    3 - 5 năm
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-
-                            <div
-                              class="uk-flex uk-flex-between uk-hidden@s mb-16"
-                            >
-                              <div class="uk-text-left">
-                                <div
-                                  style="
-                                    font-size: 14px;
-                                    color: #4b4b4b;
-                                    font-weight: 500;
-                                  "
-                                >
-                                  Chứng chỉ
-                                </div>
-                                <div
-                                  style="
-                                    font-size: 18px;
-                                    font-weight: 600;
-                                    color: #0abe27;
-                                  "
-                                >
-                                  TESOL, TEFL
-                                </div>
-                              </div>
-                              <div
-                                style="
-                                  width: 1px;
-                                  margin: 0 16px;
-                                  background-color: #d5d5d5;
-                                "
-                              ></div>
-                              <div class="uk-text-left">
-                                <div
-                                  style="
-                                    font-size: 14px;
-                                    color: #4b4b4b;
-                                    font-weight: 500;
-                                  "
-                                >
-                                  Kinh nghiệm
-                                </div>
-                                <div
-                                  style="
-                                    font-size: 18px;
-                                    font-weight: 600;
-                                    color: #0abe27;
-                                  "
-                                >
-                                  3 - 5 năm
-                                </div>
-                              </div>
-                            </div>
-
-                            <div class="mb-16">
-                              <iframe
-                                uk-video
-                                style="border-radius: 8px; aspect-ratio: 16/9"
-                                class="uk-object-contain uk-width-expand"
-                                width="420"
-                                allow="autoplay"
-                                src="https://www.youtube.com/embed/_lj327AsvCs?autoplay=1"
-                              >
-                              </iframe>
-                            </div>
-
-                            <div
-                              class="block-01__desc block-01__desc--fz-18 uk-margin"
-                              id="popup-quote"
-                              style="color: #2b2b2c"
-                            >
-                              “Tôi có thể dạy từ các bạn mới bắt đầu đến các bạn
-                              đã có kiến thức nền và đang muốn cải thiện thêm
-                              vốn tiếng Anh của mình. Khi dạy trẻ em, tôi sử
-                              dụng linh hoạt nhiều phương pháp khác nhau. Tôi
-                              tin rằng học tiếng Anh với các bạn nhỏ nên là một
-                              quá trình thú vị và hấp dẫn. Vì vậy, tôi luôn tâm
-                              niệm rằng học sinh của mình phải có nhiều niềm vui
-                              trong lớp.”
-                            </div>
-                          </fieldset>
-                        </div>
-                      </div>
-                    </div>
-                    <!--End Modal giáo viên -->
 
                     <script>
                       var website = "https://chipchip.edu.vn";
